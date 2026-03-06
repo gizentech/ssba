@@ -1,0 +1,178 @@
+.section {
+  position: relative;
+  z-index: 1001;
+  padding: 80px 0;
+  margin-top: 120px;
+  background-color: var(--color-white);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+/* ===== 左：牧原大成 ===== */
+.mainPlayer {
+}
+
+.mainPlayerLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainImageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mainImageWrapper:hover .mainImage {
+  transform: scale(1.2);
+}
+
+.ggBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2;
+}
+
+.ggImage {
+  width: auto;
+  height: auto;
+  max-width: 60%;
+  object-fit: contain;
+}
+
+.mainPlayerInfo {
+  margin-top: 12px;
+}
+
+.currentLabel {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.mainPlayerName {
+  font-size: 22px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.mainPlayerTeam {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray);
+  vertical-align: middle;
+}
+
+/* ===== 右：過去サポート選手 上段3列・下段4列 ===== */
+.pastArea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pastRow3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pastRow4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.pastCard {
+  text-align: center;
+}
+
+.pastImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.pastImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.pastCard:hover .pastImage {
+  transform: scale(1.2);
+}
+
+.pastName {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.pastTeam {
+  font-size: 10px;
+  color: var(--color-gray);
+}
+
+/* ===== SP ===== */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+    margin-top: 120px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .mainPlayerName {
+    font-size: 20px;
+  }
+
+  .pastRow3,
+  .pastRow4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

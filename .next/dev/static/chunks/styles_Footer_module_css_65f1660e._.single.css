@@ -1,0 +1,119 @@
+/* [project]/styles/Footer.module.css [client] (css) */
+.Footer-module__bU2TmW__footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  z-index: 2;
+  padding: 60px 0 24px;
+  position: relative;
+}
+
+.Footer-module__bU2TmW__footerInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Footer-module__bU2TmW__footerTop {
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+  display: grid;
+}
+
+.Footer-module__bU2TmW__footerInfo {
+  flex-direction: column;
+  display: flex;
+}
+
+.Footer-module__bU2TmW__footerLogo {
+  margin-bottom: 16px;
+}
+
+.Footer-module__bU2TmW__footerLogo img {
+  width: auto;
+  height: 50px;
+}
+
+.Footer-module__bU2TmW__footerName {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Footer-module__bU2TmW__footerSubName {
+  color: #fff9;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.Footer-module__bU2TmW__footerAddress {
+  color: #fffc;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 2;
+}
+
+.Footer-module__bU2TmW__footerAddress a {
+  color: #fffc;
+  transition: color .3s;
+}
+
+.Footer-module__bU2TmW__footerAddress a:hover {
+  color: var(--color-primary);
+}
+
+.Footer-module__bU2TmW__footerBusiness {
+  flex-direction: column;
+  display: flex;
+}
+
+.Footer-module__bU2TmW__footerBusinessTitle {
+  border-bottom: 1px solid #fff3;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.Footer-module__bU2TmW__footerBusinessGrid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  display: grid;
+}
+
+.Footer-module__bU2TmW__footerBusinessLink {
+  color: #fffc;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: color .3s;
+}
+
+.Footer-module__bU2TmW__footerBusinessLink:hover {
+  color: var(--color-primary);
+}
+
+.Footer-module__bU2TmW__footerBottom {
+  text-align: center;
+  border-top: 1px solid #ffffff26;
+  padding-top: 20px;
+}
+
+.Footer-module__bU2TmW__copyright {
+  color: #ffffff80;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .Footer-module__bU2TmW__footerTop {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .Footer-module__bU2TmW__footerBusinessGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
+/*# sourceMappingURL=styles_Footer_module_css_65f1660e._.single.css.map*/

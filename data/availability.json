@@ -1,0 +1,74 @@
+{
+  "classes": [
+    {
+      "id": "elementary",
+      "name": "小学生クラス",
+      "subtitle": "17:15〜18:35",
+      "schedule": "",
+      "days": {
+        "mon": "○",
+        "tue": "○",
+        "wed": "○",
+        "thu": "○",
+        "fri": "○",
+        "sat": "×"
+      }
+    },
+    {
+      "id": "junior-high",
+      "name": "中学生クラス",
+      "subtitle": "18:45〜20:10",
+      "schedule": "",
+      "days": {
+        "mon": "○",
+        "tue": "×",
+        "wed": "×",
+        "thu": "○",
+        "fri": "○",
+        "sat": "×"
+      }
+    },
+    {
+      "id": "high-level",
+      "name": "ハイレベルクラス",
+      "subtitle": "小学6年生限定 / 18:45〜20:10",
+      "schedule": "",
+      "days": {
+        "mon": "△",
+        "tue": "△",
+        "wed": "○",
+        "thu": "×",
+        "fri": "×",
+        "sat": "×"
+      }
+    },
+    {
+      "id": "junior-high-3",
+      "name": "中学3年生クラス",
+      "subtitle": "9月〜3月のみ / 17:00〜19:00",
+      "schedule": "",
+      "days": {
+        "mon": "×",
+        "tue": "×",
+        "wed": "×",
+        "thu": "×",
+        "fri": "×",
+        "sat": "○"
+      }
+    },
+    {
+      "id": "new-class",
+      "name": "新設クラス",
+      "subtitle": "準備中",
+      "schedule": "",
+      "days": {
+        "mon": "−",
+        "tue": "−",
+        "wed": "−",
+        "thu": "−",
+        "fri": "−",
+        "sat": "−"
+      }
+    }
+  ]
+}

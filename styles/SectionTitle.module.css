@@ -1,0 +1,32 @@
+.wrapper {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.english {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.bar {
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 12px 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}

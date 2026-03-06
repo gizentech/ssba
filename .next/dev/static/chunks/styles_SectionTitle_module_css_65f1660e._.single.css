@@ -1,0 +1,35 @@
+/* [project]/styles/SectionTitle.module.css [client] (css) */
+.SectionTitle-module__WiZZFa__wrapper {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.SectionTitle-module__WiZZFa__english {
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.SectionTitle-module__WiZZFa__bar {
+  background-color: var(--color-primary);
+  width: 40px;
+  height: 3px;
+  margin: 12px 0;
+}
+
+.SectionTitle-module__WiZZFa__title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .SectionTitle-module__WiZZFa__title {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=styles_SectionTitle_module_css_65f1660e._.single.css.map*/

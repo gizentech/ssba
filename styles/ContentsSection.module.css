@@ -1,0 +1,142 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 2-column layout: 6:4 */
+.columns {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 40px;
+}
+
+/* Left: contents images */
+.left {
+  min-width: 0;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.imageButton {
+  display: block;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+.imageButton:hover {
+  opacity: 0.8;
+}
+
+.imageButton img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.414;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right: support banners */
+.right {
+  min-width: 0;
+}
+
+.bannerList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.bannerItem {
+  display: block;
+  aspect-ratio: 4 / 1;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+.bannerItem:hover {
+  opacity: 0.8;
+}
+
+.bannerItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Popup overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.overlayImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .imageGrid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .bannerList {
+    gap: 12px;
+    margin-top: 24px;
+  }
+}

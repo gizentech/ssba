@@ -1,0 +1,442 @@
+/* ===== 固定背景（Page1 + Page2 共通） ===== */
+.fixedBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  transition: opacity 0.6s ease;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ===== Page 1: ファーストビュー ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* YouTube動画 */
+.heroVideo {
+  position: fixed;
+  left: 10%;
+  top: 15%;
+  width: 55%;
+  aspect-ratio: 16 / 9;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heroVideoIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 縦書きテキスト */
+.verticalText {
+  position: fixed;
+  right: 120px;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 2;
+  writing-mode: vertical-rl;
+  color: var(--color-white);
+  font-size: 15px;
+  line-height: 2.2;
+  letter-spacing: 4px;
+  font-weight: 400;
+  height: 80vh;
+}
+
+.heroTitle {
+  font-family: "Yuji Syuku", serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+/* フェードイン・アウト（CSSトランジション） */
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* 左下ニュースティッカー */
+.newsTicker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 14px 32px;
+  max-width: 60%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.newsLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+.newsDate {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsTag {
+  font-size: 12px;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 2px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.newsText {
+  font-size: 14px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+/* 左下リンクボタン */
+.bottomLinks {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  gap: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.bottomLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 120px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bottomLink:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== アカデミー空き状況 ===== */
+.availabilityPc {
+  position: fixed;
+  bottom: 0;
+  right: 16px;
+  z-index: 10;
+}
+
+.availabilitySpWrapper {
+  display: none;
+}
+
+.availabilitySp {
+  display: none;
+}
+
+/* SP用: logo + 空き状況（PCでは非表示） */
+.spAvailSection {
+  display: none;
+}
+
+.spLogoAfter {
+  display: none;
+}
+
+/* ===== Page 2: スクロールセクション ===== */
+.page2 {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  margin-top: 30vh;
+}
+
+.page2Content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.page2ImageWrap {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 30vw;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page2ImageWrapLeft {
+  right: 50%;
+  margin-right: 280px;
+  transform: translateY(-50%) translateX(-60px);
+}
+
+.page2ImageWrapRight {
+  left: 50%;
+  margin-left: 280px;
+  transform: translateY(-50%) translateX(60px);
+}
+
+.page2ImageWrapVisible.page2ImageWrapLeft {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.page2ImageWrapVisible.page2ImageWrapRight {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.page2Image {
+  width: 100%;
+  height: auto;
+}
+
+/* SP用フェード切り替え画像（PCでは非表示） */
+.page2ImageFade {
+  display: none;
+}
+
+.page2ImageFadeItem {
+  transition: opacity 1s ease;
+}
+
+.page2Inner {
+  writing-mode: vertical-rl;
+  height: 85vh;
+}
+
+.page2Title {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 4px;
+  color: var(--color-white);
+  margin: 0 0 48px 0;
+}
+
+.page2Body {
+  font-size: 15px;
+  line-height: 2.2;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.page2BtnWrap {
+  margin-top: 60px;
+  align-self: center;
+  display: none;
+}
+
+.page2Btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  padding: 16px 40px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  transition: background-color 0.3s;
+}
+
+.page2Btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.page2BtnArrow {
+  font-size: 14px;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    height: 100vh;
+  }
+
+  .heroVideo {
+    display: none;
+  }
+
+  .verticalText {
+    writing-mode: horizontal-tb;
+    right: auto;
+    left: 50%;
+    top: 60svh;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 3px;
+  }
+
+  .verticalText p {
+    writing-mode: vertical-rl;
+    height: 50svh;
+  }
+
+  .heroTitle {
+    writing-mode: vertical-rl;
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: auto;
+  }
+
+  .newsTicker {
+    display: none;
+  }
+
+  .bottomLinks {
+    display: none;
+  }
+
+  .availabilityPc {
+    display: none;
+  }
+
+  .availabilitySpWrapper {
+    display: none;
+  }
+
+  .availabilitySp {
+    display: none;
+  }
+
+  .spAvailSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 40px 16px;
+  }
+
+  .spLogoAfter {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .spLogoAfter img {
+    height: 56px;
+    width: auto;
+  }
+
+  .page2 {
+    padding: 60px 16px;
+    margin-top: 20vh;
+  }
+
+  .page2Content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* PC用の左右画像は非表示 */
+  .page2ImageWrap {
+    display: none;
+  }
+
+  /* SP用フェード切り替え画像を表示 */
+  .page2ImageFade {
+    display: block;
+    position: relative;
+    width: 90%;
+    order: 1;
+    margin-bottom: 24px;
+  }
+
+  .page2ImageFadeItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .page2ImageFadeItem:first-child {
+    position: relative;
+  }
+
+  .page2Inner {
+    height: auto;
+    order: 2;
+  }
+
+  .page2Title {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .page2Body {
+    font-size: 13px;
+  }
+
+  .page2BtnWrap {
+    display: none;
+  }
+}

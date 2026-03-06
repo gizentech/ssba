@@ -1,0 +1,155 @@
+.page {
+  padding-top: var(--header-height);
+}
+
+.pageHeader {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.pageSubtitle {
+  font-size: 14px;
+  color: var(--color-gold);
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+.courseSection {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.courseItem {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 40px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.courseItem:last-child {
+  border-bottom: none;
+}
+
+.courseNumber {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.courseContent {
+  flex: 1;
+}
+
+.courseTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.courseTag {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.courseMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.courseMetaItem {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.courseMetaLabel {
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-right: 4px;
+}
+
+.courseDescription {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--color-dark);
+}
+
+.coursePrice {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-top: 16px;
+}
+
+.coursePriceUnit {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.coursePriceNote {
+  font-size: 12px;
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .courseItem {
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 0;
+  }
+
+  .courseTitle {
+    font-size: 18px;
+  }
+
+  .courseMeta {
+    gap: 12px;
+  }
+
+  .coursePrice {
+    font-size: 24px;
+  }
+
+  .pageHeader {
+    padding: 40px 0;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+  }
+
+  .courseSection {
+    padding: 48px 0;
+  }
+}

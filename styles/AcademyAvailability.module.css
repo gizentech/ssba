@@ -1,0 +1,97 @@
+.wrapper {
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 18px;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cornerCell {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dayHeader {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 0 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  width: 36px;
+}
+
+.classCell {
+  position: relative;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 8px 6px 0;
+  background: transparent;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.className {
+  display: inline;
+}
+
+.statusCell {
+  text-align: center;
+  padding: 5px 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statusMark {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ===== SP ===== */
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 12px 14px;
+  }
+
+  .title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .dayHeader {
+    font-size: 11px;
+    width: 28px;
+    padding-bottom: 5px;
+  }
+
+  .classCell {
+    font-size: 11px;
+    padding: 5px 6px 5px 0;
+  }
+
+  .statusMark {
+    font-size: 14px;
+  }
+}

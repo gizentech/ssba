@@ -1,0 +1,7 @@
+__turbopack_load_page_chunks__("/coaches", [
+  "static/chunks/a76005ede87a6ca8.js",
+  "static/chunks/4f1f14debc7bcd15.js",
+  "static/chunks/00ec219efa96af20.js",
+  "static/chunks/e1c95847772ec1d0.css",
+  "static/chunks/turbopack-85fcbc111ff32b9c.js"
+])

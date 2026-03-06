@@ -1,0 +1,1196 @@
+[00:00:01.131] Server  LOG     ✓ Ready in 754ms
+[00:00:01.418] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:00:03.180] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:00:05.367] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:06.914] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:11.055] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:00:12.995] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:14.653] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:32.638] Server  LOG     ✓ Compiled in 45ms
+[00:00:38.278] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:41.261] Server  LOG     ✓ Compiled in 13ms
+[00:00:48.404] Server  LOG     ✓ Compiled in 12ms
+[00:02:51.597] Server  LOG     ✓ Compiled in 86ms
+[00:02:51.713] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:02:56.299] Server  LOG     ✓ Compiled in 11ms
+[00:02:59.690] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:03:01.514] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:03:40.512] Server  LOG     ✓ Compiled in 20ms
+[00:03:44.783] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:03:44.783] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:04:29.499] Server  LOG     ✓ Compiled in 33ms
+[00:04:52.075] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:04:52.402] Server  LOG     ✓ Compiled in 24ms
+[00:04:53.668] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:04:54.419] Browser WARN    Image with src "/images/makihara_nagare.JPG" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:04:55.877] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:04:57.289] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:05:12.860] Server  LOG     ✓ Compiled in 30ms
+[00:05:35.008] Server  LOG     ✓ Compiled in 32ms
+[00:05:36.830] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:05:38.567] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:06:12.971] Server  LOG     ✓ Compiled in 29ms
+[00:06:43.013] Server  LOG     ✓ Compiled in 38ms
+[00:06:43.065] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <SphereBg> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:06:49.686] Server  LOG     ✓ Compiled in 10ms
+[00:06:50.112] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <SphereBg> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:06:54.697] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:06:55.712] Server  LOG     ✓ Compiled in 9ms
+[00:07:01.055] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:07:01.055] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <SphereBg> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:07:04.782] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:07:05.135] Server  LOG     ✓ Compiled in 81ms
+[00:07:05.532] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:07:10.839] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:10.839] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:10.839] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:10.839] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:11.640] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:11.640] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:12.055] Browser ERROR   uncaughtError: Error: ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+
+[00:07:13.120] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:13.120] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:13.120] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:13.120] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:13.277] Server  LOG     ✓ Compiled in 22ms
+[00:07:14.121] Browser ERROR   ./components/home/SphereBg.js:268:74
+Parsing ecmascript source code failed
+  266 |         backgroundPosition: 'center',
+  267 |       }}
+> 268 |       {/* スプラッシュ画面（初回ロード時のみ表示） */}
+      |                                             ^
+  269 |       <div
+  270 |         ref={splashRef}
+  271 |         style={{
+
+Expected '...', got '}'
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:14.121] Browser ERROR   ./components/home/SphereBg.js
+Code generation for chunk item errored
+An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+
+Caused by:
+- CJS module can't be async.
+
+Debug info:
+- An error occurred while generating the chunk item [project]/components/home/SphereBg.js [ssr] (ecmascript)
+- Execution of <ModuleChunkItem as EcmascriptChunkItem>::content_with_async_module_info failed
+- Execution of EcmascriptChunkItemContent::new failed
+- CJS module can't be async.
+
+Import traces:
+  Browser:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/SphereBg.js
+    ./components/home/HeroSection.js
+    ./pages/index.js
+[00:07:14.874] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:07:15.073] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:07:16.153] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:07:18.090] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:07:19.664] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:07:58.420] Server  LOG     ✓ Compiled in 36ms
+[00:08:01.762] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:08:01.762] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:08:59.266] Server  LOG     ✓ Compiled in 23ms
+[00:09:03.269] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:09:03.269] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:09:04.505] Server  LOG     ✓ Compiled in 22ms
+[00:09:08.180] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:09:08.180] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:10:34.396] Server  LOG     ✓ Compiled in 78ms
+[00:10:34.702] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:11:28.344] Server  LOG     ✓ Compiled in 26ms
+[00:11:32.744] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:11:32.744] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:11:32.889] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:11:34.959] Browser LOG     THREE.WebGLRenderer: Context Restored.
+[00:11:37.613] Server  LOG     ✓ Compiled in 92ms
+[00:11:40.948] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:11:40.948] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:14:24.139] Server  LOG     ✓ Compiled in 60ms
+[00:14:28.155] Server  LOG     ✓ Compiled in 15ms
+[00:14:31.787] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:14:33.228] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:14:34.895] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:14:36.493] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:15:36.043] Server  LOG     ✓ Compiled in 25ms
+[00:15:40.032] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:15:40.032] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:18:34.853] Server  LOG     ✓ Compiled in 99ms
+[00:28:52.984] Server  LOG     ✓ Compiled in 304ms
+[00:28:53.107] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:29:50.550] Server  LOG     ✓ Compiled in 63ms
+[00:29:51.695] Browser WARN    Image with src "/images/logo_after.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:29:55.088] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:29:55.088] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:30:05.893] Server  LOG     ✓ Compiled in 45ms
+[00:30:09.103] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:30:09.103] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:30:12.750] Server  LOG     ✓ Compiled in 68ms
+[00:31:07.771] Server  LOG     ✓ Compiled in 115ms
+[00:31:11.855] Server  LOG     ✓ Compiled in 86ms
+[00:31:12.665] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:12.665] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:16.008] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:16.008] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:16.791] Server  LOG     ✓ Compiled in 25ms
+[00:31:19.135] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:31:19.736] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:19.736] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:21.290] Server  LOG     ✓ Compiled in 74ms
+[00:31:21.547] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:31:23.512] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:31:24.933] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:32:13.945] Server  LOG     ✓ Compiled in 19ms
+[00:32:17.084] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:32:17.084] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:32:48.857] Server  LOG     ✓ Compiled in 33ms
+[00:32:48.949] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:32:58.576] Server  LOG     ✓ Compiled in 39ms
+[00:33:02.571] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:02.571] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:03.888] Server  LOG     ✓ Compiled in 69ms
+[00:33:07.632] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:33:07.632] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:07.632] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:08.367] Server  LOG     ✓ Compiled in 0ms
+[00:33:13.189] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:13.189] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:13.189] Browser ERROR   THREE.THREE.WebGLProgram: Shader Error 0 - VALIDATE_STATUS false
+
+Material Name: 
+Material Type: MeshBasicMaterial
+
+Program Info Log: 
+
+
+[00:33:13.189] Browser ERROR   THREE.THREE.WebGLProgram: Shader Error 1282 - VALIDATE_STATUS false
+
+Material Name: 
+Material Type: MeshBasicMaterial
+
+Program Info Log: 
+
+
+[00:33:13.189] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:33:15.307] Browser LOG     THREE.WebGLRenderer: Context Restored.
+[00:33:15.417] Server  LOG     ✓ Compiled in 43ms
+[00:33:18.894] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:18.894] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:23.253] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:33:25.666] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:33:27.634] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:29.008] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:29.149] Server  LOG     ✓ Compiled in 24ms
+[00:33:32.602] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:33:32.602] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:35:08.873] Server  LOG     ✓ Compiled in 26ms
+[00:35:32.006] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:35:33.206] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:35:35.407] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:35:37.095] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:27.816] Server  LOG     ✓ Compiled in 40ms
+[00:36:32.718] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:32.718] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:34.800] Server  LOG     ✓ Compiled in 33ms
+[00:36:40.088] Server  LOG     ✓ Compiled in 55ms
+[00:36:40.633] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:40.633] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:49.767] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:49.767] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:36:50.107] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:36:51.120] Browser LOG     THREE.WebGLRenderer: Context Restored.
+[00:36:51.181] Server  LOG     ✓ Compiled in 144ms
+[00:36:55.503] Server  LOG     ✓ Compiled in 48ms
+[00:37:00.233] Server  LOG     ✓ Compiled in 71ms
+[00:37:04.973] Server  LOG     ✓ Compiled in 29ms
+[00:38:07.952] Server  LOG     ✓ Compiled in 56ms
+[00:38:09.119] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:38:13.682] Server  LOG     ✓ Compiled in 23ms
+[00:38:14.163] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:38:19.857] Server  LOG     ✓ Compiled in 39ms
+[00:38:26.194] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:38:26.194] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:40:48.057] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:40:49.467] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:40:51.310] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:40:52.679] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:41:46.604] Server  LOG     ✓ Compiled in 35ms
+[00:41:54.193] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:41:55.487] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:41:57.098] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:41:57.958] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:41:59.870] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:42:01.461] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:42:05.567] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:42:07.561] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:42:09.095] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:42:12.908] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:42:14.927] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:42:16.560] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:25.608] Server  LOG     ✓ Compiled in 28ms
+[00:43:26.113] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [] [1]
+[00:43:29.199] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:29.199] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:29.874] Server  LOG     ✓ Compiled in 43ms
+[00:43:33.410] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:34.648] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:43:34.840] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:37.115] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:43:37.115] Browser WARN    Image with src "/images/makihara_nagare.JPG" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:43:38.711] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:43:40.160] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:48:00.644] Server  LOG     ✓ Compiled in 146ms
+[00:48:20.218] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:48:20.851] Server  LOG     ✓ Compiled in 8ms
+[00:48:21.278] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+      <App pageProps={{}} Component={function Home} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+        <Head>
+        <Layout>
+          <Header>
+          <main>
+            <Home>
+              <Head>
+              <HeroSection>
+              <ProSupportSection>
+              <OfficialMedia>
+              <ColumnSection>
+                <section className="ColumnSect...">
+                  <div className="ColumnSect...">
+                    <div
++                     className="ColumnSection-module__PQUaOW__header"
+-                     className={null}
+                    >
+                      <div
++                       className="ColumnSection-module__PQUaOW__titleBlock"
+-                       className={null}
+                      >
+                        <div
++                         className="ColumnSection-module__PQUaOW__titleBar"
+-                         className={null}
+                        >
+                        <h2
++                         className="ColumnSection-module__PQUaOW__sectionTitle"
+-                         className={null}
+                        >
++                         コラム／インタビュー
+                        <p
++                         className="ColumnSection-module__PQUaOW__sectionEnglish"
+-                         className={null}
+                        >
++                         ARTICLES/INTERVIEWS
+                      <LinkComponent href="/column" className="ColumnSect...">
+                        <a
++                         className="ColumnSection-module__PQUaOW__headerLink"
+-                         className={null}
+                          ref={function}
+                          onClick={function onClick}
+                          onMouseEnter={function onMouseEnter}
+                          onTouchStart={function onTouchStart}
+                          href="/column"
+                        >
+                          <span
++                           className="ColumnSection-module__PQUaOW__headerLinkArrow"
+-                           className={null}
+                          >
++                           {">"}
+                    <div
++                     className="ColumnSection-module__PQUaOW__layout"
+-                     className={null}
+                    >
+                      <LinkComponent href="/column" className="ColumnSect...">
+                        <a
++                         className="ColumnSection-module__PQUaOW__featured"
+-                         className={null}
+                          ref={function}
+                          onClick={function onClick}
+                          onMouseEnter={function onMouseEnter}
+                          onTouchStart={function onTouchStart}
+                          href="/column"
+                        >
+                          <div
++                           className="ColumnSection-module__PQUaOW__featuredImage"
+-                           className={null}
+                          >
+                          <div
++                           className="ColumnSection-module__PQUaOW__featuredBody"
+-                           className={null}
+                          >
+                            <h3
++                             className="ColumnSection-module__PQUaOW__featuredTitle"
+-                             className={null}
+                            >
++                             バッティングの基本姿勢について～正しいフォームを身につけることが上達への第一歩
+                            <div
++                             className="ColumnSection-module__PQUaOW__featuredMeta"
+-                             className={null}
+                            >
+                              <span
++                               className="ColumnSection-module__PQUaOW__metaDate"
+-                               className={null}
+                              >
++                               2026.03.01
+                              <span
++                               className="ColumnSection-module__PQUaOW__metaCategory"
+-                               className={null}
+                              >
++                               コーチング
+                      <div
++                       className="ColumnSection-module__PQUaOW__sideGrid"
+-                       className={null}
+                      >
+                        <LinkComponent href="/column" className="ColumnSect...">
+                          <a className="ColumnSect..." ref={function} onClick={function onClick} ...>
+                            <div>
+                            <div className="ColumnSect...">
+                              <h3>
+                              <div
++                               className="ColumnSection-module__PQUaOW__cardMeta"
+-                               className={null}
+                              >
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaDate"
+-                                 className={null}
+                                >
++                                 2026.02.15
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaCategory"
+-                                 className={null}
+                                >
++                                 トレーニング
+                        <LinkComponent href="/column" className="ColumnSect...">
+                          <a className="ColumnSect..." ref={function} onClick={function onClick} ...>
+                            <div>
+                            <div className="ColumnSect...">
+                              <h3>
+                              <div
++                               className="ColumnSection-module__PQUaOW__cardMeta"
+-                               className={null}
+                              >
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaDate"
+-                                 className={null}
+                                >
++                                 2026.02.01
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaCategory"
+-                                 className={null}
+                                >
++                                 コーチング
+                        <LinkComponent href="/column" className="ColumnSect...">
+                          <a className="ColumnSect..." ref={function} onClick={function onClick} ...>
+                            <div>
+                            <div className="ColumnSect...">
+                              <h3>
+                              <div
++                               className="ColumnSection-module__PQUaOW__cardMeta"
+-                               className={null}
+                              >
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaDate"
+-                                 className={null}
+                                >
++                                 2026.01.20
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaCategory"
+-                                 className={null}
+                                >
++                                 トレーニング
+                        <LinkComponent href="/column" className="ColumnSect...">
+                          <a className="ColumnSect..." ref={function} onClick={function onClick} ...>
+                            <div>
+                            <div className="ColumnSect...">
+                              <h3>
+                              <div
++                               className="ColumnSection-module__PQUaOW__cardMeta"
+-                               className={null}
+                              >
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaDate"
+-                                 className={null}
+                                >
++                                 2026.01.10
+                                <span
++                                 className="ColumnSection-module__PQUaOW__metaCategory"
+-                                 className={null}
+                                >
++                                 コーチング
+                    <div className="ColumnSect...">
+                      <LinkComponent href="/column" className="ColumnSect...">
+                        <a className="ColumnSect..." ref={function} onClick={function onClick} ...>
+                          <span
++                           className="ColumnSection-module__PQUaOW__moreLinkArrow"
+-                           className={null}
+                          >
++                           {">"}
+              ...
+          ...
+      ...
+
+[00:48:21.278] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:48:23.120] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:48:24.574] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:49:30.352] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:49:31.195] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:49:33.150] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:49:34.529] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:51:23.872] Server  LOG     ✓ Compiled in 24ms
+[00:51:29.565] Server  LOG     ✓ Compiled in 112ms
+[00:52:03.462] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:52:05.307] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:52:06.821] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:52:19.744] Server  LOG     ✓ Compiled in 69ms
+[00:52:25.669] Server  LOG     ✓ Compiled in 8ms
+[00:52:35.384] Server  LOG     ✓ Compiled in 15ms
+[00:53:06.839] Server  LOG     ✓ Compiled in 44ms
+[00:53:12.439] Server  LOG     ✓ Compiled in 21ms
+[00:58:57.536] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:59:02.133] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:59:02.133] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:59:06.844] Server  LOG     ✓ Compiled in 51ms
+[00:59:14.279] Server  LOG     ✓ Compiled in 38ms
+[00:59:22.127] Server  LOG     ✓ Compiled in 19ms
+[00:59:32.824] Server  LOG     ✓ Compiled in 17ms
+[00:59:41.949] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:59:43.886] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[00:59:46.091] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:59:48.223] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:59:53.514] Server  LOG     ✓ Compiled in 24ms
+[01:00:02.787] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:00:04.614] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:00:06.383] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:00:34.600] Server  LOG     ✓ Compiled in 23ms
+[01:01:05.963] Server  LOG     ✓ Compiled in 39ms
+[01:01:14.980] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:01:17.062] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:01:18.522] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:01:32.084] Server  LOG     ✓ Compiled in 20ms
+[01:02:13.595] Server  LOG     ✓ Compiled in 14ms
+[01:02:51.117] Server  LOG     ✓ Compiled in 23ms
+[01:03:15.538] Server  LOG     ✓ Compiled in 8ms
+[01:03:17.898] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:03:19.641] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:03:21.911] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:03:32.648] Server  LOG     ✓ Compiled in 16ms
+[01:04:38.766] Server  LOG     ✓ Compiled in 52ms
+[01:04:43.939] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:04:45.126] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:04:47.124] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:04:48.809] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:05:02.214] Server  LOG     ✓ Compiled in 47ms
+[01:05:37.381] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:05:41.552] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:05:41.552] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:05:43.921] Server  LOG     ✓ Compiled in 41ms
+[01:05:53.177] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:05:53.177] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:06:36.211] Server  LOG     ✓ Compiled in 31ms
+[01:06:37.115] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MobileCarousel> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:06:52.721] Server  LOG     ✓ Compiled in 23ms
+[01:06:53.084] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:06:55.836] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:06:57.573] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:06:59.113] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:07:10.745] Server  LOG     ✓ Compiled in 40ms
+[01:07:17.226] Server  LOG     ✓ Compiled in 24ms
+[01:07:49.855] Server  LOG     ✓ Compiled in 34ms
+[01:07:56.886] Server  LOG     ✓ Compiled in 86ms
+[01:17:33.147] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:17:34.235] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:17:34.440] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:17:37.489] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:17:39.822] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:21:59.098] Server  LOG     ✓ Compiled in 427ms
+[01:22:03.957] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:22:03.957] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:22:32.326] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:22:33.728] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:22:35.231] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:22:36.651] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:22:37.532] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:22:38.725] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:22:40.589] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:23:48.331] Server  LOG     ✓ Compiled in 58ms
+[01:23:52.316] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:23:53.316] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:23:54.732] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:23:56.222] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:25:55.115] Server  LOG     ✓ Compiled in 34ms
+[01:26:25.036] Server  LOG     ✓ Compiled in 41ms
+[01:27:47.484] Server  LOG     ✓ Compiled in 84ms
+[01:27:56.799] Server  LOG     ✓ Compiled in 23ms
+[01:28:04.765] Server  LOG     ✓ Compiled in 51ms
+[01:28:46.478] Server  LOG     ✓ Compiled in 65ms
+[01:30:29.290] Server  LOG     ✓ Compiled in 28ms
+[01:32:04.318] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:32:05.400] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:32:07.484] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:32:09.466] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:32:10.352] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:32:14.307] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:32:14.307] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:33:21.246] Server  LOG     ✓ Compiled in 23ms
+[01:33:28.001] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:33:28.002] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:33:28.487] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:33:29.597] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:33:31.876] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:33:33.747] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:34:18.792] Server  LOG     ✓ Compiled in 29ms
+[01:34:19.117] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <ColumnSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[01:34:25.177] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:34:25.493] Server  ERROR   ReferenceError: featuredTitle is not defined
+[01:34:25.531] Server  ERROR   ⨯ ReferenceError: featuredTitle is not defined
+[01:34:25.551] Server  ERROR   ⨯ ReferenceError: featuredTitle is not defined
+[01:34:25.891] Browser ERROR   uncaughtError: ReferenceError: featuredTitle is not defined
+[01:35:17.049] Server  ERROR   ReferenceError: featuredTitle is not defined
+[01:35:17.056] Server  ERROR   ⨯ ReferenceError: featuredTitle is not defined
+[01:35:17.064] Server  ERROR   ⨯ ReferenceError: featuredTitle is not defined
+[01:35:17.199] Browser ERROR   uncaughtError: ReferenceError: featuredTitle is not defined
+[01:35:24.374] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:35:24.434] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:35:24.526] Server  LOG     ✓ Compiled in 43ms
+[01:35:26.865] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[01:35:30.756] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:35:30.756] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:01:53.048] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:01:54.822] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:01:57.072] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:04:48.239] Server  LOG     ✓ Compiled in 229ms
+[03:04:48.468] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pro-player/kameoka.webp" "received" null
+[03:05:56.661] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:05:57.808] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:06:03.385] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:06:03.385] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:08:09.220] Server  LOG     ✓ Compiled in 42ms
+[03:08:12.604] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:08:13.452] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:08:17.285] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:08:17.285] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:10:56.551] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:11:18.711] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[03:11:24.106] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[03:11:24.106] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:28:51.225] Server  LOG     ✓ Compiled in 206ms
+[05:29:12.849] Server  LOG     ✓ Compiled in 275ms
+[05:31:06.234] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:31:08.388] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/makihara_nagare.JPG" "received" null
+[05:31:08.390] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/kawasaki_nagare.jpg" "received" null
+[05:31:08.704] Server  ERROR   Error: The requested resource isn't a valid image.
+[05:31:08.710] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:31:08.780] Server  ERROR   Error: The requested resource isn't a valid image.
+[05:31:25.591] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:31:25.591] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:35:49.064] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:35:56.558] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:35:58.753] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:36:53.070] Server  LOG     ✓ Compiled in 68ms
+[05:37:01.100] Server  LOG     ✓ Compiled in 16ms
+[05:37:06.559] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:37:07.807] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:37:10.474] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:37:12.152] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:37:17.876] Server  LOG     ✓ Compiled in 33ms
+[05:38:19.991] Server  LOG     ✓ Compiled in 29ms
+[05:39:05.094] Server  LOG     ✓ Compiled in 149ms
+[05:39:13.325] Server  LOG     ✓ Compiled in 135ms
+[05:39:13.432] Browser ERROR   ./components/home/ContentsSection.js:74:5
+Parsing ecmascript source code failed
+  72 |
+  73 |       </div>
+> 74 |     </section>
+     |     ^
+  75 |
+  76 |       {/* Popup overlay - portaled to body */}
+  77 |       {popupImage && createPortal(
+
+Expression expected
+
+Import traces:
+  Browser:
+    ./components/home/ContentsSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/ContentsSection.js
+    ./pages/index.js
+[05:39:13.432] Browser ERROR   ./components/home/ContentsSection.js:74:6
+Parsing ecmascript source code failed
+  72 |
+  73 |       </div>
+> 74 |     </section>
+     |      ^^^^^^^^^
+  75 |
+  76 |       {/* Popup overlay - portaled to body */}
+  77 |       {popupImage && createPortal(
+
+Unterminated regexp literal
+
+Import traces:
+  Browser:
+    ./components/home/ContentsSection.js
+    ./pages/index.js
+
+  SSR:
+    ./components/home/ContentsSection.js
+    ./pages/index.js
+[05:39:30.547] Server  LOG     ✓ Compiled in 70ms
+[05:40:18.322] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:40:19.374] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:40:23.225] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:40:23.225] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:17.966] Server  LOG     ✓ Compiled in 26ms
+[05:46:24.636] Server  LOG     ✓ Compiled in 56ms
+[05:46:24.960] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:24.960] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:31.379] Server  LOG     ✓ Compiled in 44ms
+[05:46:32.677] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:32.677] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:38.146] Server  LOG     ✓ Compiled in 28ms
+[05:46:38.498] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:38.498] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:38.498] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[05:46:38.498] Browser LOG     THREE.WebGLRenderer: Context Restored.
+[05:46:41.328] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:46:42.668] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:43.207] Server  LOG     ✓ Compiled in 60ms
+[05:46:43.860] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:46:48.946] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:48.946] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:49.564] Server  LOG     ✓ Compiled in 20ms
+[05:46:55.629] Server  LOG     ✓ Compiled in 29ms
+[05:46:56.651] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:46:56.651] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:04.922] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:04.922] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:05.106] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[05:47:07.903] Browser LOG     THREE.WebGLRenderer: Context Restored.
+[05:47:08.087] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:47:09.104] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:47:10.733] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:12.688] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:23.894] Server  LOG     ✓ Compiled in 143ms
+[05:47:33.468] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:47:34.168] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:47:38.916] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:47:40.590] Server  LOG     ✓ Compiled in 29ms
+[05:47:40.932] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:42.767] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[05:47:56.949] Server  LOG     ✓ Compiled in 215ms
+[05:48:05.566] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:48:06.492] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:48:13.463] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:48:18.358] Server  LOG     ✓ Compiled in 108ms
+[05:48:49.944] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:48:51.125] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:49:21.975] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:49:26.602] Server  LOG     ✓ Compiled in 168ms
+[05:50:30.218] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:50:31.109] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:51:44.184] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:51:58.105] Server  LOG     ✓ Compiled in 64ms
+[05:52:12.576] Server  LOG     ✓ Compiled in 191ms
+[05:52:13.191] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:16.885] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:18.015] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:18.567] Server  LOG     ✓ Compiled in 144ms
+[05:52:21.812] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <HeroSection> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[05:52:24.400] Server  LOG     ✓ Compiled in 17ms
+[05:52:27.179] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:27.799] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:41.741] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:52:46.835] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:54:33.409] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:58:27.953] Server  LOG     ✓ Compiled in 20ms
+[05:58:56.264] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:58:57.003] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:58:57.130] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:02.975] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:16.120] Browser LOG     Refreshing page data due to server-side change
+[05:59:16.120] Browser LOG     Refreshing page data due to server-side change
+[05:59:16.121] Server  LOG     ✓ Compiled in 92ms
+[05:59:16.366] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:16.554] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:20.075] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:22.421] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:27.071] Server  LOG     ✓ Compiled in 41ms
+[05:59:27.173] Browser LOG     Refreshing page data due to server-side change
+[05:59:27.262] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:33.199] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[05:59:33.941] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:00:01.195] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:00:04.613] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:17:46.629] Server  LOG     ✓ Compiled in 74ms
+[06:17:52.961] Server  LOG     ✓ Compiled in 26ms
+[06:17:59.202] Server  LOG     ✓ Compiled in 74ms
+[06:18:29.208] Server  LOG     ✓ Compiled in 83ms
+[06:18:33.853] Server  LOG     ✓ Compiled in 49ms
+[06:18:50.652] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[06:19:02.338] Server  LOG     ✓ Compiled in 580ms
+[06:19:03.140] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:19:49.736] Server  LOG     ✓ Compiled in 20ms
+[06:19:52.916] Server  LOG     ✓ Compiled in 9ms
+[06:19:56.494] Server  LOG     ✓ Compiled in 25ms
+[06:19:57.991] Server  LOG     ✓ Compiled in 75ms
+[06:20:01.791] Server  LOG     ✓ Compiled in 40ms
+[06:21:05.022] Server  LOG     ✓ Compiled in 18ms
+[06:21:10.147] Server  LOG     ✓ Compiled in 27ms
+[06:21:43.334] Server  LOG     ✓ Compiled in 25ms
+[06:21:55.548] Server  WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:22:10.913] Server  ERROR   PageNotFoundError: Cannot find module for page: /access
+[06:22:11.850] Browser WARN    Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap"). Use Document instead. 
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
+[06:22:12.363] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[06:22:23.306] Server  LOG     ✓ Compiled in 15ms
+[06:22:28.588] Server  LOG     ✓ Compiled in 31ms
+[06:23:01.077] Server  LOG     ✓ Compiled in 31ms
+[06:23:02.420] Server  LOG     ✓ Compiled in 8ms
+[06:23:05.151] Server  LOG     ✓ Compiled in 21ms
+[06:23:06.119] Browser WARN    Image with src "/images/zenshin.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

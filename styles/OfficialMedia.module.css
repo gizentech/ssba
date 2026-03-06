@@ -1,0 +1,188 @@
+.section {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 80px 0 120px;
+  width: 100%;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titleWrapper {
+  margin-bottom: 48px;
+}
+
+/* SectionTitle内のtitleを白に */
+.titleWrapper h2 {
+  color: var(--color-white) !important;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+/* 左右2カラム: TikTok | Instagram
+   高さ一致の計算: TikTok小カード幅=Tw/3, 高さ=(Tw/3)*32/9+10
+   Instaカード幅=Iw/2, 高さ=(Iw/2)*8/3+10
+   Tw*32/27 = Iw*8/3 → Tw:Iw = 9:8 */
+.mediaGrid {
+  display: grid;
+  grid-template-columns: 9fr 8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.mediaColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.platformHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.platformTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 1px;
+}
+
+/* ============ Bento レイアウト共通 ============ */
+/* 小カード2枚(9:16)+gapが基準高さ。大カードはその高さに合わせる */
+.bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* 大きいカード: 小カード側の高さに合わせる */
+.bentoLarge {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.bentoLarge .postThumbnail {
+  height: 100%;
+}
+
+/* 小さいカード2枚を縦に並べる(こちらが高さの基準) */
+.bentoSmallColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bentoSmall {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.bentoSmall .postThumbnail {
+  aspect-ratio: 9 / 16;
+}
+
+/* ============ Instagram: 2x2グリッド ============ */
+/* TikTok側と同じ高さに揃える。カードは3:4ではなくflex伸縮で高さを合わせる */
+.instaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+}
+
+.instaCard {
+  display: block;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.instaCard .postThumbnail {
+  height: 100%;
+}
+
+/* サムネイル共通 */
+.postThumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: #333;
+}
+
+.postThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ホバーオーバーレイ */
+.postOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--color-white);
+}
+
+.bentoLarge:hover .postOverlay,
+.bentoSmall:hover .postOverlay {
+  opacity: 1;
+}
+
+/* もっと見るリンク */
+.moreLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
+}
+
+.moreLink:hover {
+  color: var(--color-white);
+}
+
+.moreLink span {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.moreLink:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0 80px;
+  }
+
+  .mediaGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

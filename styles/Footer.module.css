@@ -1,0 +1,119 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 60px 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.footerInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+/* 左側：会社情報 */
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  margin-bottom: 16px;
+}
+
+.footerLogo img {
+  height: 50px;
+  width: auto;
+}
+
+.footerName {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footerSubName {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 16px;
+}
+
+.footerAddress {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footerAddress a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+
+.footerAddress a:hover {
+  color: var(--color-primary);
+}
+
+/* 右側：関連事業 */
+.footerBusiness {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBusinessTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footerBusinessGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.footerBusinessLink {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.footerBusinessLink:hover {
+  color: var(--color-primary);
+}
+
+/* 下部コピーライト */
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footerBusinessGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}

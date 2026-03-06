@@ -1,0 +1,98 @@
+/* [project]/styles/AcademyAvailability.module.css [client] (css) */
+.AcademyAvailability-module__dGmEAG__wrapper {
+  -webkit-backdrop-filter: blur(8px);
+  background-color: #0000;
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 18px;
+  transition: opacity .4s, transform .4s;
+}
+
+.AcademyAvailability-module__dGmEAG__title {
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.AcademyAvailability-module__dGmEAG__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.AcademyAvailability-module__dGmEAG__cornerCell {
+  background: none;
+  border-bottom: 1px solid #fff3;
+}
+
+.AcademyAvailability-module__dGmEAG__dayHeader {
+  color: #fffc;
+  letter-spacing: 1px;
+  text-align: center;
+  background: none;
+  border-bottom: 1px solid #fff3;
+  width: 36px;
+  padding: 0 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.AcademyAvailability-module__dGmEAG__classCell {
+  color: #fff;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  background: none;
+  border-bottom: 1px solid #ffffff14;
+  padding: 6px 8px 6px 0;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.AcademyAvailability-module__dGmEAG__className {
+  display: inline;
+}
+
+.AcademyAvailability-module__dGmEAG__statusCell {
+  text-align: center;
+  background: none;
+  border-bottom: 1px solid #ffffff14;
+  padding: 5px 0;
+}
+
+.AcademyAvailability-module__dGmEAG__statusMark {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .AcademyAvailability-module__dGmEAG__wrapper {
+    max-width: 100%;
+    padding: 12px 14px;
+  }
+
+  .AcademyAvailability-module__dGmEAG__title {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .AcademyAvailability-module__dGmEAG__dayHeader {
+    width: 28px;
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+
+  .AcademyAvailability-module__dGmEAG__classCell {
+    padding: 5px 6px 5px 0;
+    font-size: 11px;
+  }
+
+  .AcademyAvailability-module__dGmEAG__statusMark {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=styles_AcademyAvailability_module_css_65f1660e._.single.css.map*/

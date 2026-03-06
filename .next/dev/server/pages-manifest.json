@@ -1,0 +1,14 @@
+{
+  "/": "pages/index.js",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/admin/availability": "pages/admin/availability.js",
+  "/api/availability": "pages/api/availability.js",
+  "/coaches": "pages/coaches.js",
+  "/column": "pages/column.js",
+  "/course": "pages/course.js",
+  "/facility": "pages/facility.js",
+  "/news": "pages/news.js",
+  "/reason": "pages/reason.js"
+}

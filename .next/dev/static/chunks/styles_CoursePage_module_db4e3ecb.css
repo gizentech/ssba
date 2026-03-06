@@ -1,0 +1,157 @@
+/* [project]/styles/CoursePage.module.css [client] (css) */
+.CoursePage-module__E2WHRG__page {
+  padding-top: var(--header-height);
+}
+
+.CoursePage-module__E2WHRG__pageHeader {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.CoursePage-module__E2WHRG__pageTitle {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.CoursePage-module__E2WHRG__pageSubtitle {
+  color: var(--color-gold);
+  letter-spacing: 3px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.CoursePage-module__E2WHRG__courseSection {
+  padding: 80px 0;
+}
+
+.CoursePage-module__E2WHRG__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.CoursePage-module__E2WHRG__courseItem {
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+  display: flex;
+}
+
+.CoursePage-module__E2WHRG__courseItem:last-child {
+  border-bottom: none;
+}
+
+.CoursePage-module__E2WHRG__courseNumber {
+  background-color: var(--color-primary);
+  width: 60px;
+  height: 60px;
+  color: var(--color-white);
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 900;
+  display: flex;
+}
+
+.CoursePage-module__E2WHRG__courseContent {
+  flex: 1;
+}
+
+.CoursePage-module__E2WHRG__courseTitle {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.CoursePage-module__E2WHRG__courseTag {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  vertical-align: middle;
+  border-radius: 3px;
+  margin-left: 8px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.CoursePage-module__E2WHRG__courseMeta {
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.CoursePage-module__E2WHRG__courseMetaItem {
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+.CoursePage-module__E2WHRG__courseMetaLabel {
+  color: var(--color-dark);
+  margin-right: 4px;
+  font-weight: 700;
+}
+
+.CoursePage-module__E2WHRG__courseDescription {
+  color: var(--color-dark);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.CoursePage-module__E2WHRG__coursePrice {
+  color: var(--color-primary);
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.CoursePage-module__E2WHRG__coursePriceUnit {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.CoursePage-module__E2WHRG__coursePriceNote {
+  color: var(--color-gray);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .CoursePage-module__E2WHRG__courseItem {
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 0;
+  }
+
+  .CoursePage-module__E2WHRG__courseTitle {
+    font-size: 18px;
+  }
+
+  .CoursePage-module__E2WHRG__courseMeta {
+    gap: 12px;
+  }
+
+  .CoursePage-module__E2WHRG__coursePrice {
+    font-size: 24px;
+  }
+
+  .CoursePage-module__E2WHRG__pageHeader {
+    padding: 40px 0;
+  }
+
+  .CoursePage-module__E2WHRG__pageTitle {
+    font-size: 28px;
+  }
+
+  .CoursePage-module__E2WHRG__courseSection {
+    padding: 48px 0;
+  }
+}
+
+/*# sourceMappingURL=styles_CoursePage_module_db4e3ecb.css.map*/

@@ -1,0 +1,265 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.headerLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--color-black);
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+.headerLink:hover {
+  opacity: 0.6;
+}
+
+.headerLinkArrow {
+  font-size: 12px;
+}
+
+/* Layout: featured left + 2x2 grid right */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Featured (left) */
+.featured {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.featuredImage {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.featuredImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.featured:hover .featuredImage img {
+  transform: scale(1.03);
+}
+
+.featuredBody {
+  padding: 10px 0;
+}
+
+.featuredTitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.featuredMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* PC: Side grid (right 2x2) */
+.sideGridPc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* SP: Mobile carousel (hidden on PC) */
+.sideGrid {
+  display: none;
+}
+
+.carouselTrack {
+  display: flex;
+}
+
+.card {
+  display: block;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.cardImage {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.03);
+}
+
+.cardBody {
+  padding: 10px 0;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* Shared meta styles */
+.metaDate {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+.metaCategory {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+/* More link button */
+.moreLink {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.moreLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 64px;
+  border: 1px solid #333;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.moreLinkBtn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.moreLinkArrow {
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* PC grid hidden on SP */
+  .sideGridPc {
+    display: none;
+  }
+
+  /* SP carousel visible */
+  .sideGrid {
+    display: block;
+    overflow: hidden;
+    margin-top: 24px;
+  }
+
+  .carouselTrack {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .carouselTrack .card {
+    min-width: 0;
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .cardImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dotActive {
+    background-color: var(--color-primary);
+  }
+
+  .moreLinkBtn {
+    padding: 14px 40px;
+    font-size: 14px;
+  }
+}
