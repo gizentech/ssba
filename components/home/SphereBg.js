@@ -15,20 +15,18 @@ import {
 } from 'three';
 
 const SPHERE_IMAGES = [
-  '/images/IMG_9356.webp',
-  '/images/IMG_9357.webp',
   '/images/IMG_9358.webp',
   '/images/IMG_9359.webp',
   '/images/IMG_9361.webp',
   '/images/makihara_nagare.webp',
   '/images/kawasaki_nagare.webp',
   '/images/honda_nagare.webp',
-  '/images/nagare/nagare01.webp',
-  '/images/nagare/nagare03.webp',
-  '/images/nagare/nagare04.webp',
-  '/images/nagare/nagare05.webp',
-  '/images/nagare/nagare06.webp',
-  '/images/facility.webp',
+  '/images/nagare/nagare01.avif',
+  '/images/nagare/nagare03.avif',
+  '/images/nagare/nagare04.avif',
+  '/images/nagare/nagare05.avif',
+  '/images/nagare/nagare06.avif',
+  '/images/facility.avif',
 ];
 
 // フィボナッチ球体アルゴリズム
