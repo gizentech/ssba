@@ -1,116 +1,111 @@
-import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import SeoHead from '@/components/common/SeoHead';
+import Image from 'next/image';
+import subStyles from '@/styles/SubPage.module.css';
 import styles from '@/styles/CoursePage.module.css';
-
-const COURSES = [
-  {
-    number: '①',
-    title: '小学生クラス',
-    schedule: '月曜日〜金曜日 17:15〜18:35',
-    capacity: '定員 8名',
-    price: '13,200',
-    priceNote: '税込 / 月4回',
-  },
-  {
-    number: '②',
-    title: '中学生クラス',
-    subtitle: '硬式軟式混合',
-    schedule: '月・木・金曜日 18:45〜20:10',
-    capacity: '定員 8名',
-    price: '15,400',
-    priceNote: '税込 / 月4回',
-  },
-  {
-    number: '③',
-    title: '小学6年生限定 ハイレベルクラス',
-    tag: '新設クラス',
-    schedule: '水曜日 18:45〜20:10',
-    capacity: '定員 10名',
-    price: '15,400',
-    priceNote: '税込 / 月4回',
-    description:
-      '元プロ野球独立リーグのスタッフによるハイレベルな技術練習＋トレーニングを指導するクラス。毎月一回ラプソードでの球速、打球速度計測、柔軟性、瞬発力など SSBAオリジナルメニューをデータ化し成長をサポートする。定期交流戦やグランド練習など計画予定。',
-  },
-  {
-    number: '④',
-    title: '中学3年生クラス',
-    schedule: '9月〜3月 土曜日 17:00〜19:00',
-    price: '16,000',
-    priceNote: '税込',
-    description:
-      '高校野球準備クラス。技術練習、トレーニング、硬式球での交流戦などを行う。',
-  },
-  {
-    number: '⑤',
-    title: 'パーソナルレッスン',
-    schedule: '60分',
-    price: '6,600',
-    priceNote: '※2名まで同額',
-  },
-  {
-    number: '⑥',
-    title: 'ラプソード計測',
-    description: '球速・打球速度などの計測を行います。',
-  },
-  {
-    number: '⑦',
-    title: 'チーム出張指導',
-    description: 'チーム単位での出張指導を承ります。詳しくはお問い合わせください。',
-  },
-];
+import { fetchCourses } from '@/lib/wp-api';
 
 export default function CoursePage() {
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchCourses().then((data) => {
+      setCourses(data);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <>
-      <Head>
-        <title>コース・料金 | SSBA</title>
-      </Head>
-      <div className={styles.page}>
-        <div className={styles.pageHeader}>
-          <p className={styles.pageSubtitle}>COURSE & PRICE</p>
-          <h1 className={styles.pageTitle}>コース・料金</h1>
+      <SeoHead
+        title="コース・料金｜個人・グループレッスン【SSBA 久留米】"
+        description="SSBAのコース・料金案内。小学生・中学生・高校生・大人向けの個人レッスン・グループレッスン・パーソナルトレーニング。入会金なし。福岡県久留米市の野球教室・野球塾。"
+        keywords="SSBA,コース,料金,個人レッスン,グループレッスン,野球塾,久留米,福岡,小学生,中学生,高校生,パーソナルトレーニング,野球教室"
+        canonical="/course"
+      />
+      <div className={subStyles.wrapper}>
+        <div className={subStyles.titleCard}>
+          <div className={subStyles.titleInner}>
+            <h1 className={subStyles.pageTitle}>コース・料金</h1>
+            <p className={subStyles.pageSub}>COURSE & PRICE</p>
+          </div>
         </div>
-        <section className={styles.courseSection}>
-          <div className={styles.inner}>
-            {COURSES.map((course) => (
-              <div key={course.number} className={styles.courseItem}>
-                <div className={styles.courseNumber}>{course.number}</div>
-                <div className={styles.courseContent}>
-                  <h2 className={styles.courseTitle}>
-                    {course.title}
-                    {course.subtitle && ` （${course.subtitle}）`}
-                    {course.tag && <span className={styles.courseTag}>{course.tag}</span>}
-                  </h2>
-                  <div className={styles.courseMeta}>
-                    {course.schedule && (
-                      <span className={styles.courseMetaItem}>
-                        <span className={styles.courseMetaLabel}>日時</span>
-                        {course.schedule}
-                      </span>
-                    )}
-                    {course.capacity && (
-                      <span className={styles.courseMetaItem}>
-                        <span className={styles.courseMetaLabel}>定員</span>
-                        {course.capacity}
-                      </span>
+        <div className={subStyles.body}>
+          {loading ? (
+            <div className={subStyles.section}>
+              <p className={subStyles.text} style={{ color: '#888' }}>読み込み中...</p>
+            </div>
+          ) : courses.length === 0 ? (
+            <div className={subStyles.section}>
+              <p className={subStyles.text}>コンテンツ準備中です</p>
+            </div>
+          ) : (
+            <div className={styles.courseGrid}>
+              {courses.map((course) => (
+                <div key={course.id} className={styles.courseCard}>
+                  <div className={styles.courseImage}>
+                    {course.image ? (
+                      <Image
+                        src={course.image}
+                        alt={course.title}
+                        width={600}
+                        height={400}
+                        className={styles.courseImg}
+                      />
+                    ) : (
+                      <div className={styles.courseImgPlaceholder} />
                     )}
                   </div>
-                  {course.description && (
-                    <p className={styles.courseDescription}>{course.description}</p>
-                  )}
-                  {course.price && (
-                    <p className={styles.coursePrice}>
-                      {course.price}
-                      <span className={styles.coursePriceUnit}>円</span>
-                      {course.priceNote && (
-                        <span className={styles.coursePriceNote}> {course.priceNote}</span>
+                  <div className={styles.courseContent}>
+                    <div className={styles.courseHeader}>
+                      {course.number && (
+                        <div className={styles.courseNumber}>
+                          {course.number.replace(/[①②③④⑤⑥⑦⑧⑨⑩]/g, (c) =>
+                            String('①②③④⑤⑥⑦⑧⑨⑩'.indexOf(c) + 1)
+                          )}
+                        </div>
                       )}
-                    </p>
-                  )}
+                      <h2 className={styles.courseTitle}>
+                        {course.title}
+                        {course.subtitle && ` （${course.subtitle}）`}
+                        {course.tag && (
+                          <span className={styles.courseTag}>{course.tag}</span>
+                        )}
+                      </h2>
+                    </div>
+                    <div className={styles.courseMeta}>
+                      {course.schedule && (
+                        <span className={styles.courseMetaItem}>
+                          <span className={styles.courseMetaLabel}>日時</span>
+                          {course.schedule}
+                        </span>
+                      )}
+                      {course.capacity && (
+                        <span className={styles.courseMetaItem}>
+                          <span className={styles.courseMetaLabel}>定員</span>
+                          {course.capacity}
+                        </span>
+                      )}
+                    </div>
+                    {course.description && (
+                      <p className={styles.courseDescription}>{course.description}</p>
+                    )}
+                    {course.price && (
+                      <p className={styles.coursePrice}>
+                        {course.price}
+                        <span className={styles.coursePriceUnit}>円</span>
+                        {course.priceNote && (
+                          <span className={styles.coursePriceNote}> {course.priceNote}</span>
+                        )}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

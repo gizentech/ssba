@@ -8,7 +8,20 @@
       "Bash(ls:*)",
       "Bash(grep:*)",
       "Bash(wc:*)",
-      "Bash(ANALYZE=true npx next build:*)"
+      "Bash(ANALYZE=true npx next build:*)",
+      "WebFetch(domain:ssba.e3.valueserver.jp)",
+      "Bash(curl -s \"http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1/coaches\")",
+      "Bash(curl -s \"http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1/courses\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f'{c[\\\\\"id\\\\\"]}: {c[\\\\\"title\\\\\"]} - desc: {repr\\(c[\\\\\"description\\\\\"][:50] if c[\\\\\"description\\\\\"] else \\\\\"\\\\\"\\)}'\\) for c in data]\")",
+      "Bash(curl -s \"http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1/\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(r\\) for r in d.get\\('routes',{}\\).keys\\(\\)]\")",
+      "Bash(npm run:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://ssba.e3.valueserver.jp/wp/wp-json/wp/v2/pages/3\")",
+      "Bash(curl -s \"http://ssba.e3.valueserver.jp/wp/wp-json/wp/v2/pages?slug=privacy-policy&status=any\")",
+      "Bash(curl -s \"http://ssba.e3.valueserver.jp/wp/wp-json/wp/v2/pages?slug=privacy-policy\")",
+      "Read(//c/Users/shira/Downloads/ssba//**)",
+      "Read(//c/Users/shira/Downloads/ssba/public/**)"
     ]
   }
 }

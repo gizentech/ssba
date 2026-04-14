@@ -1,13 +1,16 @@
-import Head from 'next/head';
+import SeoHead from '@/components/common/SeoHead';
 import Image from 'next/image';
 import styles from '@/styles/AboutPage.module.css';
 
 export default function AboutPage() {
   return (
     <>
-      <Head>
-        <title>SSBAについて - SSBA</title>
-      </Head>
+      <SeoHead
+        title="SSBAとは｜野球塾の概要・施設・貸出【福岡県久留米市】"
+        description="SSBA（シューティングスターベースボールアカデミー）の概要。福岡県久留米市安武町の全天候型室内練習場。代表・流大輔が運営する野球塾の施設情報・貸出料金をご紹介。"
+        keywords="SSBA,野球塾,概要,久留米,福岡,室内練習場,施設貸出,流大輔,シューティングスター,野球アカデミー"
+        canonical="/about"
+      />
       <div className={styles.page}>
         <div className={styles.pageHeader}>
           <p className={styles.pageSubtitle}>ABOUT</p>

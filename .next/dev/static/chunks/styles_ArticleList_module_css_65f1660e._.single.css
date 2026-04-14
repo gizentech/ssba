@@ -1,0 +1,99 @@
+/* [project]/styles/ArticleList.module.css [client] (css) */
+.ArticleList-module__CFmSZa__grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  display: grid;
+}
+
+.ArticleList-module__CFmSZa__card {
+  color: inherit;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  flex-direction: column;
+  text-decoration: none;
+  transition: box-shadow .2s;
+  display: flex;
+}
+
+.ArticleList-module__CFmSZa__card:hover {
+  box-shadow: 0 4px 16px #0000001a;
+}
+
+.ArticleList-module__CFmSZa__cardImage {
+  aspect-ratio: 3 / 2;
+  background: #111;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ArticleList-module__CFmSZa__cardImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.ArticleList-module__CFmSZa__cardImagePlaceholder {
+  background: #1a1a1a;
+  width: 100%;
+  height: 100%;
+}
+
+.ArticleList-module__CFmSZa__cardBody {
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+  padding: 16px;
+  display: flex;
+}
+
+.ArticleList-module__CFmSZa__cardMeta {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.ArticleList-module__CFmSZa__metaDate {
+  color: #888;
+  letter-spacing: .5px;
+  font-size: 12px;
+}
+
+.ArticleList-module__CFmSZa__metaTag {
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.ArticleList-module__CFmSZa__cardTitle {
+  color: #111;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.ArticleList-module__CFmSZa__empty {
+  text-align: center;
+  color: #888;
+  padding: 60px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .ArticleList-module__CFmSZa__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ArticleList-module__CFmSZa__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/*# sourceMappingURL=styles_ArticleList_module_css_65f1660e._.single.css.map*/

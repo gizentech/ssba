@@ -28,42 +28,9 @@
 .HeroSection-module__fSZHDq__hero {
   z-index: 1;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  height: 0;
+  min-height: 0;
   position: relative;
-  overflow: hidden;
-}
-
-.HeroSection-module__fSZHDq__heroVideo {
-  aspect-ratio: 16 / 9;
-  z-index: 2;
-  pointer-events: none;
-  width: 55%;
-  position: fixed;
-  top: 15%;
-  left: 10%;
-  overflow: hidden;
-}
-
-.HeroSection-module__fSZHDq__heroVideoIframe {
-  border: none;
-  width: 100%;
-  height: 100%;
-}
-
-.HeroSection-module__fSZHDq__verticalText {
-  z-index: 2;
-  writing-mode: vertical-rl;
-  color: var(--color-white);
-  letter-spacing: 4px;
-  height: 80vh;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 2.2;
-  position: fixed;
-  top: 55%;
-  right: 120px;
-  transform: translateY(-50%);
 }
 
 .HeroSection-module__fSZHDq__heroTitle {
@@ -161,6 +128,32 @@
   background-color: #ffffff4d;
 }
 
+.HeroSection-module__fSZHDq__bottomLinkDivider {
+  background: #fff6;
+  width: 1px;
+  height: 90px;
+}
+
+.HeroSection-module__fSZHDq__bottomLinkLine {
+  background-color: #00c30080;
+}
+
+.HeroSection-module__fSZHDq__bottomLinkLine:hover {
+  background-color: #00c300bf;
+}
+
+.HeroSection-module__fSZHDq__bottomLinkInsta {
+  background-color: #c1358473;
+}
+
+.HeroSection-module__fSZHDq__bottomLinkInsta:hover {
+  background-color: #c13584b3;
+}
+
+.HeroSection-module__fSZHDq__bottomLinkContact {
+  background-color: #ffffff26;
+}
+
 .HeroSection-module__fSZHDq__availabilityPc {
   z-index: 10;
   position: fixed;
@@ -168,8 +161,13 @@
   right: 16px;
 }
 
-.HeroSection-module__fSZHDq__availabilitySpWrapper, .HeroSection-module__fSZHDq__availabilitySp, .HeroSection-module__fSZHDq__spAvailSection, .HeroSection-module__fSZHDq__spLogoAfter {
+.HeroSection-module__fSZHDq__availabilitySpWrapper, .HeroSection-module__fSZHDq__availabilitySp, .HeroSection-module__fSZHDq__spAvailSection, .HeroSection-module__fSZHDq__spLogoAfter, .HeroSection-module__fSZHDq__spAvailInHero {
   display: none;
+}
+
+.HeroSection-module__fSZHDq__heroTitleImage {
+  width: auto;
+  height: auto;
 }
 
 .HeroSection-module__fSZHDq__page2 {
@@ -178,7 +176,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: 30vh;
+  margin-top: 0;
   padding: 80px 24px;
   display: flex;
   position: relative;
@@ -253,6 +251,10 @@
   line-height: 2.2;
 }
 
+.HeroSection-module__fSZHDq__spAvailBelow {
+  display: none;
+}
+
 .HeroSection-module__fSZHDq__page2BtnWrap {
   align-self: center;
   margin-top: 60px;
@@ -283,71 +285,25 @@
 
 @media (max-width: 768px) {
   .HeroSection-module__fSZHDq__hero {
-    height: 100vh;
-    min-height: 500px;
+    height: 0;
+    min-height: 0;
   }
 
-  .HeroSection-module__fSZHDq__heroVideo {
+  .HeroSection-module__fSZHDq__newsTicker, .HeroSection-module__fSZHDq__bottomLinks, .HeroSection-module__fSZHDq__availabilityPc, .HeroSection-module__fSZHDq__availabilitySpWrapper, .HeroSection-module__fSZHDq__availabilitySp, .HeroSection-module__fSZHDq__spAvailSection, .HeroSection-module__fSZHDq__spLogoAfter, .HeroSection-module__fSZHDq__spAvailInHero {
     display: none;
-  }
-
-  .HeroSection-module__fSZHDq__verticalText {
-    writing-mode: horizontal-tb;
-    letter-spacing: 3px;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: auto;
-    font-size: 12px;
-    line-height: 2;
-    display: flex;
-    top: 60svh;
-    left: 50%;
-    right: auto;
-    transform: translate(-50%, -50%);
-  }
-
-  .HeroSection-module__fSZHDq__verticalText p {
-    writing-mode: vertical-rl;
-    height: 50svh;
-  }
-
-  .HeroSection-module__fSZHDq__heroTitle {
-    writing-mode: vertical-rl;
-    letter-spacing: 4px;
-    border-bottom: 1px solid #ffffff80;
-    height: auto;
-    margin: 0 0 20px;
-    padding-bottom: 20px;
-    font-size: 22px;
-  }
-
-  .HeroSection-module__fSZHDq__newsTicker, .HeroSection-module__fSZHDq__bottomLinks, .HeroSection-module__fSZHDq__availabilityPc, .HeroSection-module__fSZHDq__availabilitySpWrapper, .HeroSection-module__fSZHDq__availabilitySp {
-    display: none;
-  }
-
-  .HeroSection-module__fSZHDq__spAvailSection {
-    z-index: 1;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 16px;
-    display: flex;
-    position: relative;
-  }
-
-  .HeroSection-module__fSZHDq__spLogoAfter {
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .HeroSection-module__fSZHDq__spLogoAfter img {
-    width: auto;
-    height: 56px;
   }
 
   .HeroSection-module__fSZHDq__page2 {
-    margin-top: 20vh;
-    padding: 60px 16px;
+    margin-top: 0;
+    padding: 60px 16px 32px;
+  }
+
+  .HeroSection-module__fSZHDq__spAvailBelow {
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 12px;
+    display: flex;
   }
 
   .HeroSection-module__fSZHDq__page2Content {
@@ -362,7 +318,8 @@
 
   .HeroSection-module__fSZHDq__page2ImageFade {
     order: 1;
-    width: 90%;
+    width: 81%;
+    margin-top: 24px;
     margin-bottom: 24px;
     display: block;
     position: relative;

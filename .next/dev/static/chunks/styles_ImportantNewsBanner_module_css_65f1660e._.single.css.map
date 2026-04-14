@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/styles/ImportantNewsBanner.module.css"],"sourcesContent":[".banner {\n  position: relative;\n  z-index: 1001;\n  width: 100%;\n  background-color: var(--color-primary);\n}\n\n.row {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  padding: 14px 40px;\n  gap: 20px;\n  text-decoration: none;\n  transition: opacity 0.2s;\n}\n\n.row:hover {\n  opacity: 0.88;\n}\n\n.row + .row {\n  border-top: 1px solid rgba(255, 255, 255, 0.25);\n}\n\n.label {\n  font-size: 13px;\n  font-weight: 700;\n  color: #fff;\n  white-space: nowrap;\n  letter-spacing: 0.5px;\n  flex-shrink: 0;\n}\n\n.title {\n  font-size: 14px;\n  font-weight: 500;\n  color: #fff;\n  line-height: 1.5;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n@media (max-width: 768px) {\n  .row {\n    padding: 12px 16px;\n    gap: 10px;\n  }\n\n  .label {\n    font-size: 11px;\n  }\n\n  .title {\n    font-size: 12px;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;;;;;AAUA;;;;AAIA;;;;AAIA;;;;;;;;;AASA;;;;;;;;;;AAUA;EACE;;;;;EAKA;;;;EAIA"}}]
+}

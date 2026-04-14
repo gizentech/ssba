@@ -27,12 +27,19 @@ export default function Header({ isHome }) {
       return;
     }
 
+    // トップページに戻ったらスクロール位置に応じてリセット
+    setShowWhiteHeader(false);
+
     const isSP = window.innerWidth <= 960;
     const maxScale = isSP ? 2 : 4;
     const minScale = isSP ? 2 : 4;
     setLogoScale(maxScale);
 
     const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setShowWhiteHeader(false);
+        return;
+      }
       const proSection = document.getElementById('pro-support');
       if (proSection) {
         const rect = proSection.getBoundingClientRect();
@@ -56,7 +63,6 @@ export default function Header({ isHome }) {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);

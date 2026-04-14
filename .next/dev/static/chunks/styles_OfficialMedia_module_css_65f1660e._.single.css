@@ -109,6 +109,20 @@
   height: 100%;
 }
 
+.OfficialMedia-module__2bYXva__instaComingSoon {
+  color: #fff;
+  letter-spacing: .1em;
+  pointer-events: none;
+  background-color: #0000008c;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
 .OfficialMedia-module__2bYXva__postThumbnail {
   background-color: #333;
   border-radius: 0;
@@ -136,6 +150,122 @@
 
 .OfficialMedia-module__2bYXva__bentoLarge:hover .OfficialMedia-module__2bYXva__postOverlay, .OfficialMedia-module__2bYXva__bentoSmall:hover .OfficialMedia-module__2bYXva__postOverlay {
   opacity: 1;
+}
+
+.OfficialMedia-module__2bYXva__tiktokHandle {
+  color: #fe2c55;
+  letter-spacing: .3px;
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.OfficialMedia-module__2bYXva__tiktokHandle:hover {
+  opacity: .8;
+}
+
+@media (max-width: 768px) {
+  .OfficialMedia-module__2bYXva__tiktokHandle {
+    margin-top: 2px;
+    margin-left: 0;
+    font-size: 12px;
+    display: block;
+  }
+}
+
+.OfficialMedia-module__2bYXva__bentoLarge, .OfficialMedia-module__2bYXva__bentoSmall {
+  position: relative;
+}
+
+.OfficialMedia-module__2bYXva__tiktokCard {
+  cursor: pointer;
+}
+
+.OfficialMedia-module__2bYXva__tiktokCard .OfficialMedia-module__2bYXva__postThumbnail img {
+  transition: transform .3s;
+}
+
+.OfficialMedia-module__2bYXva__tiktokCard:hover .OfficialMedia-module__2bYXva__postThumbnail img {
+  transform: scale(1.05);
+}
+
+.OfficialMedia-module__2bYXva__popupOverlay {
+  z-index: 1000;
+  background: #000c;
+  justify-content: center;
+  align-items: center;
+  padding-top: 56px;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.OfficialMedia-module__2bYXva__popupBox {
+  background: #000;
+  border-radius: 12px;
+  width: 325px;
+  height: 740px;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.OfficialMedia-module__2bYXva__popupClose {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.OfficialMedia-module__2bYXva__popupIframe {
+  border: none;
+  width: 325px;
+  height: 740px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .OfficialMedia-module__2bYXva__popupOverlay {
+    align-items: flex-start;
+    padding-top: 64px;
+  }
+
+  .OfficialMedia-module__2bYXva__popupBox {
+    width: 325px;
+    max-width: calc(100vw - 32px);
+    height: 740px;
+    max-height: calc(100vh - 104px);
+  }
+
+  .OfficialMedia-module__2bYXva__popupIframe {
+    width: 325px;
+    height: 740px;
+  }
+}
+
+.OfficialMedia-module__2bYXva__statsOverlay {
+  color: #fff;
+  background: linear-gradient(#0000, #000000b3);
+  gap: 10px;
+  padding: 20px 10px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.OfficialMedia-module__2bYXva__statItem {
+  align-items: center;
+  gap: 4px;
+  display: flex;
 }
 
 .OfficialMedia-module__2bYXva__moreLink {

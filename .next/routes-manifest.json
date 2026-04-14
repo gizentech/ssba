@@ -6,12 +6,26 @@
   "basePath": "",
   "redirects": [
     {
-      "source": "/:path+/",
-      "destination": "/:path+",
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "priority": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
       "internal": true,
       "priority": true,
       "statusCode": 308,
-      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
     }
   ],
   "headers": [],
@@ -35,10 +49,40 @@
       "namedRegex": "^/about(?:/)?$"
     },
     {
+      "page": "/access",
+      "regex": "^/access(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/access(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
       "page": "/admin/availability",
       "regex": "^/admin/availability(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/admin/availability(?:/)?$"
+    },
+    {
+      "page": "/admin/column",
+      "regex": "^/admin/column(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/column(?:/)?$"
+    },
+    {
+      "page": "/admin/news",
+      "regex": "^/admin/news(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/news(?:/)?$"
+    },
+    {
+      "page": "/admin/partners",
+      "regex": "^/admin/partners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/partners(?:/)?$"
     },
     {
       "page": "/api/availability",
@@ -47,10 +91,28 @@
       "namedRegex": "^/api/availability(?:/)?$"
     },
     {
-      "page": "/blog",
-      "regex": "^/blog(?:/)?$",
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/blog(?:/)?$"
+      "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/contents",
+      "regex": "^/api/contents(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contents(?:/)?$"
+    },
+    {
+      "page": "/api/partners",
+      "regex": "^/api/partners(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/partners(?:/)?$"
+    },
+    {
+      "page": "/api/upload-banner",
+      "regex": "^/api/upload\\-banner(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/upload\\-banner(?:/)?$"
     },
     {
       "page": "/coaches",
@@ -63,6 +125,12 @@
       "regex": "^/column(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/column(?:/)?$"
+    },
+    {
+      "page": "/column/detail",
+      "regex": "^/column/detail(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/column/detail(?:/)?$"
     },
     {
       "page": "/contact",
@@ -89,6 +157,24 @@
       "namedRegex": "^/news(?:/)?$"
     },
     {
+      "page": "/news/detail",
+      "regex": "^/news/detail(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/news/detail(?:/)?$"
+    },
+    {
+      "page": "/privacy-policy",
+      "regex": "^/privacy\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy\\-policy(?:/)?$"
+    },
+    {
+      "page": "/pro-player/makihara",
+      "regex": "^/pro\\-player/makihara(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pro\\-player/makihara(?:/)?$"
+    },
+    {
       "page": "/reason",
       "regex": "^/reason(?:/)?$",
       "routeKeys": {},
@@ -101,7 +187,12 @@
       "namedRegex": "^/sitemap(?:/)?$"
     }
   ],
-  "dataRoutes": [],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/KwdS2H2cpr7iqvM5kTFdw/index\\.json$"
+    }
+  ],
   "rsc": {
     "header": "rsc",
     "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",

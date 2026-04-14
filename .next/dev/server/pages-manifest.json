@@ -3,12 +3,11 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
+  "/admin": "pages/admin.js",
   "/admin/availability": "pages/admin/availability.js",
-  "/api/availability": "pages/api/availability.js",
-  "/coaches": "pages/coaches.js",
-  "/column": "pages/column.js",
+  "/admin/news": "pages/admin/news.js",
+  "/admin/partners": "pages/admin/partners.js",
+  "/contact": "pages/contact.js",
   "/course": "pages/course.js",
-  "/facility": "pages/facility.js",
-  "/news": "pages/news.js",
-  "/reason": "pages/reason.js"
+  "/facility": "pages/facility.js"
 }

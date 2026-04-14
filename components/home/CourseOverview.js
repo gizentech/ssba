@@ -4,42 +4,42 @@ import styles from '@/styles/CourseOverview.module.css';
 
 const COURSES = [
   {
-    number: '①',
+    number: '１',
     title: '小学生クラス',
     meta: '月〜金 / 17:15〜18:35 / 定員8名',
     price: '13,200',
     unit: '円（税込）/ 月4回',
   },
   {
-    number: '②',
+    number: '２',
     title: '中学生クラス',
     meta: '月・木・金 / 18:45〜20:10 / 定員8名',
     price: '15,400',
     unit: '円（税込）/ 月4回',
   },
   {
-    number: '③',
+    number: '３',
     title: '小6 ハイレベルクラス',
     meta: '水曜日 / 18:45〜20:10 / 定員10名',
     price: '15,400',
     unit: '円（税込）/ 月4回',
   },
   {
-    number: '④',
+    number: '４',
     title: '中学3年生クラス',
     meta: '9月〜3月 土曜日 / 17:00〜19:00',
     price: '16,000',
     unit: '円（税込）',
   },
   {
-    number: '⑤',
+    number: '５',
     title: 'パーソナルレッスン',
     meta: '60分 / 2名まで同額',
     price: '6,600',
     unit: '円',
   },
   {
-    number: '⑥',
+    number: '６',
     title: 'ラプソード計測',
     meta: '球速・打球速度を計測',
     price: '',

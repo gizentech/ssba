@@ -16,7 +16,6 @@ import {
 
 const SPHERE_IMAGES = [
   '/images/IMG_9358.webp',
-  '/images/IMG_9359.webp',
   '/images/IMG_9361.webp',
   '/images/makihara_nagare.webp',
   '/images/kawasaki_nagare.webp',
@@ -46,10 +45,6 @@ function fibonacciSphere(count) {
   return points;
 }
 
-// ジオメトリを全カードで共有（saichu.jpと同じ手法）
-const sharedGeometry = new PlaneGeometry(0.8, 0.57);
-const sharedPoints = fibonacciSphere(36);
-
 export default function SphereBg() {
   const containerRef = useRef(null);
 
@@ -57,8 +52,17 @@ export default function SphereBg() {
     const container = containerRef.current;
     if (!container) return;
 
-    // WebGLサポートチェック
+    // ジオメトリ生成をここで行い、モジュールロード時のブロッキングを防ぐ
+    const sharedGeometry = new PlaneGeometry(0.8, 0.57);
+    const sharedPoints = fibonacciSphere(36);
+
+    let cleanupFn = null;
+
+    // ヘッダーや初期コンテンツの描画を優先するため、初期化を遅延させる
+    const timeoutId = setTimeout(() => {
     let renderer;
+    let animationId;
+    // WebGLサポートチェック
     try {
       renderer = new WebGLRenderer({ antialias: true, alpha: true });
     } catch (e) {
@@ -71,6 +75,7 @@ export default function SphereBg() {
       renderer.dispose();
       return;
     }
+
 
     const scene = new Scene();
 
@@ -91,6 +96,7 @@ export default function SphereBg() {
     canvas.style.left = '0';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
     container.appendChild(canvas);
 
     let scrollProgress = 0;
@@ -157,7 +163,6 @@ export default function SphereBg() {
     const introDuration = 2.5;
     const fastSpeed = 8.0;
     const normalSpeed = 0.15;
-    let animationId;
     let startTime = performance.now();
     let rotationY = 0;
     let prevElapsed = 0;
@@ -219,13 +224,14 @@ export default function SphereBg() {
     };
     window.addEventListener('resize', handleResize);
 
-    return () => {
+    // setTimeout のクリーンアップ用に参照を保持
+    cleanupFn = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(animationId);
       renderer.dispose();
+      sharedGeometry.dispose();
       scene.traverse((obj) => {
-        if (obj.geometry && obj.geometry !== sharedGeometry) obj.geometry.dispose();
         if (obj.material) {
           if (obj.material.map) obj.material.map.dispose();
           obj.material.dispose();
@@ -234,6 +240,12 @@ export default function SphereBg() {
       if (container.contains(canvas)) {
         container.removeChild(canvas);
       }
+    };
+    }, 100); // 100ms遅延で初期コンテンツ描画を優先
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (cleanupFn) cleanupFn();
     };
   }, []);
 
@@ -247,6 +259,7 @@ export default function SphereBg() {
         width: '100%',
         height: '100vh',
         zIndex: 0,
+        pointerEvents: 'none',
         backgroundImage: 'url(/images/p2_bg.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

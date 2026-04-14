@@ -1,6 +1,6 @@
 /* [project]/styles/PlaceholderPage.module.css [client] (css) */
 .PlaceholderPage-module__rB9y5a__page {
-  padding-top: var(--header-height);
+  padding-top: 56px;
 }
 
 .PlaceholderPage-module__rB9y5a__pageHeader {
@@ -25,6 +25,7 @@
 .PlaceholderPage-module__rB9y5a__content {
   max-width: var(--max-width);
   text-align: center;
+  background-color: var(--color-white);
   flex-direction: column;
   justify-content: center;
   align-items: center;

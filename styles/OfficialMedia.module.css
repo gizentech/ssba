@@ -119,6 +119,20 @@
   height: 100%;
 }
 
+.instaComingSoon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
 /* サムネイル共通 */
 .postThumbnail {
   position: relative;
@@ -149,6 +163,128 @@
 .bentoLarge:hover .postOverlay,
 .bentoSmall:hover .postOverlay {
   opacity: 1;
+}
+
+/* TikTok アカウント名 */
+.tiktokHandle {
+  color: #fe2c55;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-left: 6px;
+}
+
+.tiktokHandle:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .tiktokHandle {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+    font-size: 12px;
+  }
+}
+
+/* bentoLarge / bentoSmall に position:relative を付与 */
+.bentoLarge,
+.bentoSmall {
+  position: relative;
+}
+
+/* カードホバー */
+.tiktokCard {
+  cursor: pointer;
+}
+
+.tiktokCard .postThumbnail img {
+  transition: transform 0.3s ease;
+}
+
+.tiktokCard:hover .postThumbnail img {
+  transform: scale(1.05);
+}
+
+/* ── ポップアップ ── */
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 56px; /* ヘッダー分だけコンテンツをずらす */
+  z-index: 1000;
+}
+
+.popupBox {
+  position: relative;
+  width: 325px;
+  height: 740px;
+  max-height: 90vh;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.popupClose {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.popupIframe {
+  width: 325px;
+  height: 740px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .popupOverlay {
+    align-items: flex-start;
+    padding-top: calc(48px + 16px); /* SPヘッダー + 余白 */
+  }
+
+  .popupBox {
+    width: 325px;
+    max-width: calc(100vw - 32px);
+    height: 740px;
+    max-height: calc(100vh - 48px - 56px);
+  }
+
+  .popupIframe {
+    width: 325px;
+    height: 740px;
+  }
+}
+
+/* ── 統計オーバーレイ ── */
+.statsOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 10px;
+  padding: 20px 10px 8px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* もっと見るリンク */

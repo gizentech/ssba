@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/styles/PlaceholderPage.module.css [ssr] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"comingSoon\": \"PlaceholderPage-module__rB9y5a__comingSoon\",\n  \"content\": \"PlaceholderPage-module__rB9y5a__content\",\n  \"page\": \"PlaceholderPage-module__rB9y5a__page\",\n  \"pageHeader\": \"PlaceholderPage-module__rB9y5a__pageHeader\",\n  \"pageSubtitle\": \"PlaceholderPage-module__rB9y5a__pageSubtitle\",\n  \"pageTitle\": \"PlaceholderPage-module__rB9y5a__pageTitle\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA"}}]
+}

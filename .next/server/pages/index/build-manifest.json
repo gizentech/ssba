@@ -6,12 +6,14 @@
   "rootMainFiles": [],
   "pages": {
     "/": [
-      "static/chunks/aba3bc0b2d5ab7b6.js",
-      "static/chunks/d8c4ecbaf4e52624.js",
-      "static/chunks/4f1f14debc7bcd15.js",
-      "static/chunks/00ec219efa96af20.js",
-      "static/chunks/35cf1747588e317c.css",
-      "static/chunks/turbopack-f615460b4ac4c025.js"
+      "static/chunks/2b8262193bcfbe11.js",
+      "static/chunks/986aa93e75a01b09.js",
+      "static/chunks/09a63c1432335464.js",
+      "static/chunks/3251185ccd955feb.js",
+      "static/chunks/94a19a2443edf931.js",
+      "static/chunks/d94cb5a0396fae63.js",
+      "static/chunks/7a78966034172cd6.css",
+      "static/chunks/turbopack-25fb766d164ffee9.js"
     ]
   },
   "ampFirstPages": []

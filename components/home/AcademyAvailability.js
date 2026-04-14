@@ -21,13 +21,27 @@ export default function AcademyAvailability({ visible = true }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('/api/availability')
+    const api = process.env.NEXT_PUBLIC_WP_API || 'https://ssba1223.com/wp/wp-json/ssba/v1';
+    fetch(`${api}/availability`)
       .then((res) => res.json())
       .then((d) => setData(d))
       .catch(() => {});
   }, []);
 
-  if (!data) return null;
+  if (!data) {
+    return (
+      <div
+        className={styles.wrapper}
+        style={{
+          opacity: visible ? 1 : 0,
+          pointerEvents: visible ? 'auto' : 'none',
+        }}
+      >
+        <h3 className={styles.title}>アカデミー空き状況</h3>
+        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, margin: 0 }}>読み込み中...</p>
+      </div>
+    );
+  }
 
   return (
     <div

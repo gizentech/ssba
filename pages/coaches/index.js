@@ -1,107 +1,225 @@
-import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import SeoHead from '@/components/common/SeoHead';
 import Image from 'next/image';
 import styles from '@/styles/CoachesPage.module.css';
+import { fetchCoaches } from '@/lib/wp-api';
 
-const NAGARE_IMAGES = [
-  { src: '/images/nagare/nagare01.avif', alt: '流 大輔 1' },
-  { src: '/images/nagare/nagare03.avif', alt: '流 大輔 2' },
-  { src: '/images/nagare/nagare04.avif', alt: '流 大輔 3' },
-  { src: '/images/nagare/nagare05.avif', alt: '流 大輔 4' },
-  { src: '/images/nagare/nagare06.avif', alt: '流 大輔 5' },
-];
+function ProfileList({ profile }) {
+  if (!profile || profile.length === 0) return null;
+  return (
+    <ul className={styles.profileList}>
+      {profile.map((item, i) => (
+        <li key={i}>
+          {item.text}
+          {item.children && item.children.length > 0 && (
+            <ul className={styles.subList}>
+              {item.children.map((child, j) => (
+                <li key={j}>{child}</li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
-export default function CoachesPage() {
+function CareerSection({ career }) {
+  if (!career || career.length === 0) return null;
   return (
     <>
-      <Head>
-        <title>指導者紹介 - SSBA</title>
-      </Head>
-      <div className={styles.page}>
-        <div className={styles.pageHeader}>
-          <p className={styles.pageSubtitle}>COACHES</p>
-          <h1 className={styles.pageTitle}>指導者紹介</h1>
-        </div>
-
-        <section className={styles.section}>
-          <div className={styles.inner}>
-            {/* 名前 */}
-            <div className={styles.coachHeader}>
-              <h2 className={styles.coachName}>流 大輔</h2>
-              <p className={styles.coachNameEn}>Daisuke Nagare</p>
-            </div>
-
-            {/* 画像ギャラリー - 横並び */}
-            <div className={styles.imageGallery}>
-              {NAGARE_IMAGES.map((img) => (
-                <div key={img.src} className={styles.imageItem}>
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={240}
-                    height={360}
-                    className={styles.coachImage}
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* プロフィール */}
-            <div className={styles.profileSection}>
-              <h3 className={styles.profileTitle}>プロフィール</h3>
-              <ul className={styles.profileList}>
-                <li>福岡県久留米市出身 1989/3/11生まれ</li>
-                <li>祐誠高校</li>
-                <li>社会人クラブチーム福岡オーシャンズ9</li>
-                <li>
-                  プロ野球独立リーグ 四国アイランドリーグ plus
-                  <ul className={styles.subList}>
-                    <li>高知ファイティングドッグス　2008〜2011</li>
-                    <li>愛媛マンダリンパイレーツ　2012〜同年引退</li>
-                  </ul>
-                </li>
-                <li>（株）サニクリーン九州福岡軟式野球部　2013〜2015</li>
-                <li>高知ファイティングドッグススカウト　2015〜</li>
+      {career.map((block, i) => (
+        <div key={i} className={styles.careerBlock}>
+          <h4 className={styles.careerSubTitle}>{block.subtitle}</h4>
+          {block.items && (
+            <ul className={styles.careerList}>
+              {block.items.map((item, j) => <li key={j}>{item}</li>)}
+            </ul>
+          )}
+          {block.teams && block.teams.map((team, k) => (
+            <div key={k} className={styles.careerTeam}>
+              <p className={styles.teamName}>{team.name}</p>
+              <ul className={styles.careerList}>
+                {(team.items || []).map((item, l) => <li key={l}>{item}</li>)}
               </ul>
             </div>
+          ))}
+        </div>
+      ))}
+    </>
+  );
+}
 
-            {/* 主な球歴 */}
-            <div className={styles.profileSection}>
-              <h3 className={styles.profileTitle}>主な球歴</h3>
+function CoachSection({ coach }) {
+  const LOCAL_GALLERY = [
+    '/images/nagare/nagare01.avif',
+    '/images/nagare/nagare03.avif',
+    '/images/nagare/nagare04.avif',
+    '/images/nagare/nagare05.avif',
+    '/images/nagare/nagare06.avif',
+  ];
+  const validGallery = (coach.gallery || []).filter(
+    (url) => url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/')
+  );
+  const galleryImages = validGallery.length > 0 ? validGallery : LOCAL_GALLERY;
 
-              <div className={styles.careerBlock}>
-                <h4 className={styles.careerSubTitle}>祐誠高校 時代</h4>
-                <ul className={styles.careerList}>
-                  <li>2004年秋季高校野球福岡県大会3位</li>
-                  <li>2004年秋季高校野球九州大会出場</li>
-                </ul>
-              </div>
-
-              <div className={styles.careerBlock}>
-                <h4 className={styles.careerSubTitle}>プロ野球独立リーグ四国アイランドリーグ時代</h4>
-                <div className={styles.careerTeam}>
-                  <p className={styles.teamName}>高知ファイティングドッグス 2008年〜2011年</p>
-                  <ul className={styles.careerList}>
-                    <li>2009年独立リーグ日本一</li>
-                    <li>2011年最多盗塁王 通算128盗塁</li>
-                  </ul>
-                </div>
-                <div className={styles.careerTeam}>
-                  <p className={styles.teamName}>愛媛マンダリンパイレーツ 2012年</p>
-                  <ul className={styles.careerList}>
-                    <li>2012年後期優勝 打率部門リーグ7位</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={styles.careerBlock}>
-                <h4 className={styles.careerSubTitle}>社会人軟式野球時代</h4>
-                <ul className={styles.careerList}>
-                  <li>軟式野球福岡県代表国体選手 2013年</li>
-                </ul>
-              </div>
-            </div>
+  return (
+    <div className={styles.body}>
+      <div className={styles.mainColumn}>
+        <div className={styles.coachCard}>
+          <div className={styles.coachPhoto}>
+            <Image
+              src={coach.photo || '/images/nagare.webp'}
+              alt={coach.name}
+              width={200}
+              height={267}
+            />
           </div>
-        </section>
+          <div className={styles.coachInfo}>
+            <p className={styles.coachLabel}>{coach.role}</p>
+            <p className={styles.coachName}>{coach.name}</p>
+            <p className={styles.coachNameEn}>{coach.nameEn}</p>
+          </div>
+        </div>
+
+        {coach.greeting && (
+          <div className={styles.greetingBlock}>
+            <p className={styles.greetingText}>{coach.greeting}</p>
+          </div>
+        )}
+
+        {galleryImages.length > 0 && (
+          <div className={styles.imageGalleryPc}>
+            {galleryImages.map((url, i) => (
+              <div key={i} className={styles.imageItem}>
+                <Image
+                  src={url}
+                  alt={`${coach.name} ${i + 1}`}
+                  width={240}
+                  height={360}
+                  className={styles.galleryImage}
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <aside className={styles.profileSidebar}>
+        {coach.profile && coach.profile.length > 0 && (
+          <div className={styles.profileSection}>
+            <h3 className={styles.profileTitle}>プロフィール</h3>
+            <ProfileList profile={coach.profile} />
+          </div>
+        )}
+
+        {coach.career && coach.career.length > 0 && (
+          <div className={styles.profileSection}>
+            <h3 className={styles.profileTitle}>主な球歴</h3>
+            <CareerSection career={coach.career} />
+          </div>
+        )}
+
+        {galleryImages.length > 0 && (
+          <div className={styles.imageGallerySp}>
+            {galleryImages.map((url, i) => (
+              <div key={i} className={styles.imageItem}>
+                <Image
+                  src={url}
+                  alt={`${coach.name} ${i + 1}`}
+                  width={240}
+                  height={360}
+                  className={styles.galleryImage}
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </aside>
+    </div>
+  );
+}
+
+export default function CoachesPage() {
+  const [coaches, setCoaches] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchCoaches().then((data) => {
+      setCoaches(data);
+      setLoading(false);
+    });
+  }, []);
+
+  return (
+    <>
+      <SeoHead
+        title="指導者紹介｜流大輔・若松悠平コーチ【SSBA 久留米 野球塾】"
+        description="SSBAの指導者を紹介。代表・流大輔（高知ファイティングドッグス出身／独立リーグ日本一・最多盗塁王）、スタッフ・若松悠平（香川オリーブガイナーズ・福島レッドホープス出身）。牧原大成・本多雄一・川崎宗則など現役・元プロ野球選手の自主トレにも対応。久留米フューチャースターズとも連携する福岡県久留米市の野球塾。"
+        keywords="流大輔,流 大輔,Nagare Daisuke,流 野球,SSBA,指導者,コーチ,久留米,福岡,野球塾,野球アカデミー,高知ファイティングドッグス,四国アイランドリーグ,独立リーグ,若松悠平,香川オリーブガイナーズ,福島レッドホープス,祐誠高校,牧原大成,本多雄一,川崎宗則,プロ野球,自主トレ,久留米フューチャースターズ,Bar Greenlight,BarGreenlight"
+        canonical="/coaches"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          itemListElement: [
+            {
+              '@type': 'Person',
+              position: 1,
+              name: '流 大輔',
+              alternateName: 'Daisuke Nagare',
+              jobTitle: '代表 / ヘッドコーチ',
+              birthDate: '1989-03-11',
+              birthPlace: { '@type': 'Place', name: '福岡県久留米市' },
+              alumniOf: [
+                { '@type': 'EducationalOrganization', name: '祐誠高校' },
+              ],
+              memberOf: [
+                { '@type': 'SportsTeam', name: '高知ファイティングドッグス' },
+                { '@type': 'SportsTeam', name: '愛媛マンダリンパイレーツ' },
+              ],
+              award: ['独立リーグ日本一（2009年）', '最多盗塁王（2011年）通算128盗塁'],
+              worksFor: { '@type': 'Organization', name: 'SSBA - Shootingstar Baseball Academy' },
+            },
+            {
+              '@type': 'Person',
+              position: 2,
+              name: '若松 悠平',
+              alternateName: 'Yuhei Wakamatsu',
+              jobTitle: 'スタッフ',
+              alumniOf: [
+                { '@type': 'EducationalOrganization', name: '祐誠高校' },
+                { '@type': 'EducationalOrganization', name: '長崎国際大学' },
+              ],
+              memberOf: [
+                { '@type': 'SportsTeam', name: '香川オリーブガイナーズ' },
+                { '@type': 'SportsTeam', name: '福島レッドホープス' },
+              ],
+              worksFor: { '@type': 'Organization', name: 'SSBA - Shootingstar Baseball Academy' },
+            },
+          ],
+        }}
+      />
+      <div className={styles.wrapper}>
+        <div className={styles.titleCard}>
+          <div className={styles.titleInner}>
+            <h1 className={styles.pageTitle}>指導者紹介</h1>
+            <p className={styles.pageSub}>COACHES</p>
+          </div>
+        </div>
+
+        {loading ? (
+          <div style={{ padding: '60px 24px', textAlign: 'center', color: '#888' }}>
+            読み込み中...
+          </div>
+        ) : coaches.length === 0 ? (
+          <div style={{ padding: '60px 24px', textAlign: 'center', color: '#888' }}>
+            コンテンツ準備中です
+          </div>
+        ) : (
+          coaches.map((coach) => (
+            <CoachSection key={coach.id} coach={coach} />
+          ))
+        )}
       </div>
     </>
   );

@@ -1,0 +1,8 @@
+{
+  "partners": [
+    { "id": 1, "src": "/images/banner/banner1.png", "alt": "バナー1", "href": "#" },
+    { "id": 2, "src": "/images/banner/banner2.png", "alt": "バナー2", "href": "#" },
+    { "id": 3, "src": "/images/banner/banner3.png", "alt": "バナー3", "href": "#" },
+    { "id": 4, "src": "/images/banner/banner4.png", "alt": "バナー4", "href": "#" }
+  ]
+}

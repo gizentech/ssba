@@ -70,28 +70,37 @@
 
 @media (max-width: 768px) {
   .AcademyAvailability-module__dGmEAG__wrapper {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     max-width: 100%;
-    padding: 12px 14px;
+    padding: 10px 10px 6px;
   }
 
   .AcademyAvailability-module__dGmEAG__title {
-    margin-bottom: 8px;
-    font-size: 12px;
+    letter-spacing: 3px;
+    color: #ffffffe6;
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 500;
   }
 
   .AcademyAvailability-module__dGmEAG__dayHeader {
-    width: 28px;
-    padding-bottom: 5px;
-    font-size: 11px;
+    width: 26px;
+    padding-bottom: 4px;
+    font-size: 10px;
   }
 
   .AcademyAvailability-module__dGmEAG__classCell {
-    padding: 5px 6px 5px 0;
-    font-size: 11px;
+    padding: 4px 4px 4px 0;
+    font-size: 10px;
+  }
+
+  .AcademyAvailability-module__dGmEAG__statusCell {
+    padding: 3px 0;
   }
 
   .AcademyAvailability-module__dGmEAG__statusMark {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

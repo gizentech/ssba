@@ -1,0 +1,30 @@
+Options -Indexes
+RewriteEngine On
+
+# www → non-www リダイレクト
+RewriteCond %{HTTP_HOST} ^www\.ssba1223\.com$ [NC]
+RewriteRule ^(.*)$ https://ssba1223.com/$1 [R=301,L]
+
+# HTTPS 強制
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Next.js static export (trailingSlash: true)
+# 実ファイル・ディレクトリは通す
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /path → /path/ にトレイリングスラッシュ付与（.htmlファイルは除外）
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+# /path/ → /path/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
+RewriteRule ^(.*)$ $1index.html [L]
+
+# 404
+ErrorDocument 404 /404.html

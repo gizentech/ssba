@@ -2,7 +2,7 @@
 .ProSupport-module__bY1w1G__section {
   z-index: 1001;
   background-color: var(--color-white);
-  margin-top: 120px;
+  margin-top: 0;
   padding: 80px 0;
   position: relative;
 }
@@ -151,7 +151,7 @@
 
 @media (max-width: 768px) {
   .ProSupport-module__bY1w1G__section {
-    margin-top: 120px;
+    margin-top: 0;
     padding: 48px 0;
   }
 

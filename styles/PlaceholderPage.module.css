@@ -1,5 +1,5 @@
 .page {
-  padding-top: var(--header-height);
+  padding-top: 56px;
 }
 
 .pageHeader {
@@ -31,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-white);
 }
 
 .comingSoon {

@@ -20,7 +20,7 @@
       256,
       384
     ],
-    "path": "/_next/image",
+    "path": "/_next/image/",
     "loader": "default",
     "loaderFile": "",
     "domains": [],
@@ -41,11 +41,22 @@
         "search": ""
       }
     ],
-    "remotePatterns": [],
+    "remotePatterns": [
+      {
+        "protocol": "http",
+        "hostname": "^(?:^(?:ssba\\.e3\\.valueserver\\.jp)$)$",
+        "pathname": "^(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?))$"
+      },
+      {
+        "protocol": "https",
+        "hostname": "^(?:^(?:ssba\\.e3\\.valueserver\\.jp)$)$",
+        "pathname": "^(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?))$"
+      }
+    ],
     "qualities": [
       75
     ],
-    "unoptimized": false,
+    "unoptimized": true,
     "sizes": [
       640,
       750,

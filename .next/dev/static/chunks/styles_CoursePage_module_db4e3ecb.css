@@ -1,6 +1,6 @@
 /* [project]/styles/CoursePage.module.css [client] (css) */
 .CoursePage-module__E2WHRG__page {
-  padding-top: var(--header-height);
+  padding-top: 56px;
 }
 
 .CoursePage-module__E2WHRG__pageHeader {
@@ -23,6 +23,7 @@
 }
 
 .CoursePage-module__E2WHRG__courseSection {
+  background-color: var(--color-white);
   padding: 80px 0;
 }
 

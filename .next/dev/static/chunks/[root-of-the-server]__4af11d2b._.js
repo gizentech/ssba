@@ -469,6 +469,7 @@ __turbopack_context__.s([
     "default",
     ()=>AvailabilityAdmin
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [client] (ecmascript)");
@@ -541,13 +542,23 @@ function AvailabilityAdmin() {
         subtitle: '',
         schedule: ''
     });
+    const [isSP, setIsSP] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const WP_API = ("TURBOPACK compile-time value", "https://ssba1223.com/wp/wp-json/ssba/v1") || 'https://ssba1223.com/wp/wp-json/ssba/v1';
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AvailabilityAdmin.useEffect": ()=>{
-            fetch('/api/availability').then({
+            fetch(`${WP_API}/availability`).then({
                 "AvailabilityAdmin.useEffect": (r)=>r.json()
             }["AvailabilityAdmin.useEffect"]).then({
                 "AvailabilityAdmin.useEffect": (d)=>setData(d)
             }["AvailabilityAdmin.useEffect"]);
+            const check = {
+                "AvailabilityAdmin.useEffect.check": ()=>setIsSP(window.innerWidth < 768)
+            }["AvailabilityAdmin.useEffect.check"];
+            check();
+            window.addEventListener('resize', check);
+            return ({
+                "AvailabilityAdmin.useEffect": ()=>window.removeEventListener('resize', check)
+            })["AvailabilityAdmin.useEffect"];
         }
     }["AvailabilityAdmin.useEffect"], []);
     const toggleStatus = (classIndex, dayKey)=>{
@@ -561,23 +572,30 @@ function AvailabilityAdmin() {
     };
     const save = async ()=>{
         setSaving(true);
-        await fetch('/api/availability', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        setSaving(false);
-        setSaved(true);
-        setTimeout(()=>setSaved(false), 2000);
+        try {
+            const res = await fetch(`${WP_API}/availability`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-SSBA-Admin-Key': 'ssba1223'
+                },
+                body: JSON.stringify(data)
+            });
+            if (!res.ok) throw new Error('保存失敗');
+            setSaved(true);
+            setTimeout(()=>setSaved(false), 2000);
+        } catch  {
+            alert('保存に失敗しました。');
+        } finally{
+            setSaving(false);
+        }
     };
     const startEditClass = (index)=>{
         const cls = data.classes[index];
         setEditForm({
             name: cls.name,
-            subtitle: cls.subtitle,
-            schedule: cls.schedule
+            subtitle: cls.subtitle || '',
+            schedule: cls.schedule || ''
         });
         setEditingClass(index);
     };
@@ -639,7 +657,7 @@ function AvailabilityAdmin() {
         children: "読み込み中..."
     }, void 0, false, {
         fileName: "[project]/pages/admin/availability.js",
-        lineNumber: 107,
+        lineNumber: 123,
         columnNumber: 21
     }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -650,7 +668,7 @@ function AvailabilityAdmin() {
                         children: "空き状況管理 - SSBA"
                     }, void 0, false, {
                         fileName: "[project]/pages/admin/availability.js",
-                        lineNumber: 112,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
@@ -658,20 +676,28 @@ function AvailabilityAdmin() {
                         content: "noindex"
                     }, void 0, false, {
                         fileName: "[project]/pages/admin/availability.js",
-                        lineNumber: 113,
+                        lineNumber: 129,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+                        rel: "stylesheet"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/admin/availability.js",
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/admin/availability.js",
-                lineNumber: 111,
+                lineNumber: 127,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     minHeight: '100vh',
-                    background: '#f9fafb',
-                    padding: '24px 16px'
+                    background: '#f5f5f5',
+                    padding: '20px 12px 100px'
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -682,41 +708,41 @@ function AvailabilityAdmin() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 style: {
-                                    fontSize: 24,
+                                    fontSize: 20,
                                     fontWeight: 700,
-                                    marginBottom: 8,
+                                    marginBottom: 4,
                                     color: '#111'
                                 },
                                 children: "アカデミー空き状況 管理"
                             }, void 0, false, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 117,
+                                lineNumber: 134,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 style: {
                                     color: '#6b7280',
-                                    fontSize: 14,
-                                    marginBottom: 24
+                                    fontSize: 13,
+                                    marginBottom: 16
                                 },
-                                children: "各セルをタップして ○ → △ → × → − を切り替えてください"
+                                children: "タップして ○ → △ → × → − を切り替え"
                             }, void 0, false, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 120,
+                                lineNumber: 137,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     display: 'flex',
-                                    gap: 16,
-                                    marginBottom: 24,
+                                    gap: 12,
+                                    marginBottom: 20,
                                     flexWrap: 'wrap'
                                 },
                                 children: STATUS_CYCLE.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         style: {
                                             display: 'flex',
                                             alignItems: 'center',
-                                            gap: 6
+                                            gap: 5
                                         },
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -724,46 +750,276 @@ function AvailabilityAdmin() {
                                                     display: 'inline-flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',
-                                                    width: 32,
-                                                    height: 32,
+                                                    width: 28,
+                                                    height: 28,
                                                     borderRadius: 6,
                                                     background: STATUS_STYLES[s].bg,
                                                     color: STATUS_STYLES[s].color,
                                                     fontWeight: 700,
-                                                    fontSize: 18
+                                                    fontSize: 16
                                                 },
                                                 children: s
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/admin/availability.js",
-                                                lineNumber: 128,
+                                                lineNumber: 145,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 style: {
-                                                    fontSize: 13,
+                                                    fontSize: 12,
                                                     color: '#374151'
                                                 },
                                                 children: STATUS_STYLES[s].label
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/admin/availability.js",
-                                                lineNumber: 134,
+                                                lineNumber: 151,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, s, true, {
                                         fileName: "[project]/pages/admin/availability.js",
-                                        lineNumber: 127,
+                                        lineNumber: 144,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 125,
+                                lineNumber: 142,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            isSP ? /* ===== SP: カード形式 ===== */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                style: {
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: 12,
+                                    marginBottom: 16
+                                },
+                                children: data.classes.map((cls, ci)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            background: '#fff',
+                                            borderRadius: 10,
+                                            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+                                            overflow: 'hidden'
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                style: {
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'space-between',
+                                                    padding: '10px 14px',
+                                                    borderBottom: '1px solid #e5e7eb',
+                                                    background: '#f9fafb'
+                                                },
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: {
+                                                                    fontWeight: 700,
+                                                                    fontSize: 14,
+                                                                    color: '#111'
+                                                                },
+                                                                children: cls.name
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 170,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            cls.subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: {
+                                                                    fontSize: 11,
+                                                                    color: '#9ca3af',
+                                                                    marginTop: 1
+                                                                },
+                                                                children: cls.subtitle
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 171,
+                                                                columnNumber: 40
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/pages/admin/availability.js",
+                                                        lineNumber: 169,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        style: {
+                                                            display: 'flex',
+                                                            gap: 2
+                                                        },
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                onClick: ()=>moveClass(ci, -1),
+                                                                style: iconBtn,
+                                                                title: "上へ",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "material-icons",
+                                                                    style: {
+                                                                        fontSize: 18
+                                                                    },
+                                                                    children: "arrow_upward"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/pages/admin/availability.js",
+                                                                    lineNumber: 174,
+                                                                    columnNumber: 92
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 174,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                onClick: ()=>moveClass(ci, 1),
+                                                                style: iconBtn,
+                                                                title: "下へ",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "material-icons",
+                                                                    style: {
+                                                                        fontSize: 18
+                                                                    },
+                                                                    children: "arrow_downward"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/pages/admin/availability.js",
+                                                                    lineNumber: 175,
+                                                                    columnNumber: 91
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 175,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                onClick: ()=>startEditClass(ci),
+                                                                style: iconBtn,
+                                                                title: "編集",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "material-icons",
+                                                                    style: {
+                                                                        fontSize: 18
+                                                                    },
+                                                                    children: "edit"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/pages/admin/availability.js",
+                                                                    lineNumber: 176,
+                                                                    columnNumber: 93
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 176,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                onClick: ()=>removeClass(ci),
+                                                                style: {
+                                                                    ...iconBtn,
+                                                                    color: '#ef4444'
+                                                                },
+                                                                title: "削除",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "material-icons",
+                                                                    style: {
+                                                                        fontSize: 18
+                                                                    },
+                                                                    children: "delete"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/pages/admin/availability.js",
+                                                                    lineNumber: 177,
+                                                                    columnNumber: 115
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 177,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/pages/admin/availability.js",
+                                                        lineNumber: 173,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/pages/admin/availability.js",
+                                                lineNumber: 165,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                style: {
+                                                    display: 'grid',
+                                                    gridTemplateColumns: 'repeat(6, 1fr)',
+                                                    gap: 6,
+                                                    padding: 10
+                                                },
+                                                children: DAY_LABELS.map((d)=>{
+                                                    const status = cls.days[d.key] || '−';
+                                                    const st = STATUS_STYLES[status];
+                                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        style: {
+                                                            textAlign: 'center'
+                                                        },
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: {
+                                                                    fontSize: 11,
+                                                                    color: '#6b7280',
+                                                                    marginBottom: 3,
+                                                                    fontWeight: 600
+                                                                },
+                                                                children: d.label
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 189,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                onClick: ()=>toggleStatus(ci, d.key),
+                                                                style: {
+                                                                    width: '100%',
+                                                                    aspectRatio: '1',
+                                                                    borderRadius: 8,
+                                                                    border: 'none',
+                                                                    background: st.bg,
+                                                                    color: st.color,
+                                                                    fontSize: 20,
+                                                                    fontWeight: 700,
+                                                                    cursor: 'pointer',
+                                                                    display: 'flex',
+                                                                    alignItems: 'center',
+                                                                    justifyContent: 'center'
+                                                                },
+                                                                children: status
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/pages/admin/availability.js",
+                                                                lineNumber: 190,
+                                                                columnNumber: 27
+                                                            }, this)
+                                                        ]
+                                                    }, d.key, true, {
+                                                        fileName: "[project]/pages/admin/availability.js",
+                                                        lineNumber: 188,
+                                                        columnNumber: 25
+                                                    }, this);
+                                                })
+                                            }, void 0, false, {
+                                                fileName: "[project]/pages/admin/availability.js",
+                                                lineNumber: 181,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, cls.id, true, {
+                                        fileName: "[project]/pages/admin/availability.js",
+                                        lineNumber: 160,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/pages/admin/availability.js",
+                                lineNumber: 158,
+                                columnNumber: 13
+                            }, this) : /* ===== PC: テーブル形式 ===== */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
                                     overflowX: 'auto',
-                                    marginBottom: 24
+                                    marginBottom: 16
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
                                     style: {
@@ -790,8 +1046,8 @@ function AvailabilityAdmin() {
                                                         children: "クラス名"
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/admin/availability.js",
-                                                        lineNumber: 144,
-                                                        columnNumber: 19
+                                                        lineNumber: 212,
+                                                        columnNumber: 21
                                                     }, this),
                                                     DAY_LABELS.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                             style: {
@@ -807,8 +1063,8 @@ function AvailabilityAdmin() {
                                                             children: d.label
                                                         }, d.key, false, {
                                                             fileName: "[project]/pages/admin/availability.js",
-                                                            lineNumber: 148,
-                                                            columnNumber: 21
+                                                            lineNumber: 214,
+                                                            columnNumber: 23
                                                         }, this)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                         style: {
@@ -819,19 +1075,19 @@ function AvailabilityAdmin() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/admin/availability.js",
-                                                        lineNumber: 152,
-                                                        columnNumber: 19
+                                                        lineNumber: 218,
+                                                        columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/pages/admin/availability.js",
-                                                lineNumber: 143,
-                                                columnNumber: 17
+                                                lineNumber: 211,
+                                                columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 142,
-                                            columnNumber: 15
+                                            lineNumber: 210,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                                             children: data.classes.map((cls, ci)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -853,8 +1109,8 @@ function AvailabilityAdmin() {
                                                                     children: cls.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/admin/availability.js",
-                                                                    lineNumber: 159,
-                                                                    columnNumber: 23
+                                                                    lineNumber: 225,
+                                                                    columnNumber: 25
                                                                 }, this),
                                                                 cls.subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     style: {
@@ -865,8 +1121,8 @@ function AvailabilityAdmin() {
                                                                     children: cls.subtitle
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/admin/availability.js",
-                                                                    lineNumber: 160,
-                                                                    columnNumber: 40
+                                                                    lineNumber: 226,
+                                                                    columnNumber: 42
                                                                 }, this),
                                                                 cls.schedule && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                     style: {
@@ -877,14 +1133,14 @@ function AvailabilityAdmin() {
                                                                     children: cls.schedule
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/admin/availability.js",
-                                                                    lineNumber: 161,
-                                                                    columnNumber: 40
+                                                                    lineNumber: 227,
+                                                                    columnNumber: 42
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/pages/admin/availability.js",
-                                                            lineNumber: 158,
-                                                            columnNumber: 21
+                                                            lineNumber: 224,
+                                                            columnNumber: 23
                                                         }, this),
                                                         DAY_LABELS.map((d)=>{
                                                             const status = cls.days[d.key] || '−';
@@ -920,13 +1176,13 @@ function AvailabilityAdmin() {
                                                                     children: status
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/admin/availability.js",
-                                                                    lineNumber: 168,
-                                                                    columnNumber: 27
+                                                                    lineNumber: 234,
+                                                                    columnNumber: 29
                                                                 }, this)
                                                             }, d.key, false, {
                                                                 fileName: "[project]/pages/admin/availability.js",
-                                                                lineNumber: 167,
-                                                                columnNumber: 25
+                                                                lineNumber: 233,
+                                                                columnNumber: 27
                                                             }, this);
                                                         }),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -943,104 +1199,119 @@ function AvailabilityAdmin() {
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                         onClick: ()=>moveClass(ci, -1),
-                                                                        style: {
-                                                                            border: 'none',
-                                                                            background: 'none',
-                                                                            cursor: 'pointer',
-                                                                            fontSize: 16,
-                                                                            color: '#9ca3af',
-                                                                            padding: 4
-                                                                        },
+                                                                        style: iconBtn,
                                                                         title: "上へ",
-                                                                        children: "↑"
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "material-icons",
+                                                                            style: {
+                                                                                fontSize: 18
+                                                                            },
+                                                                            children: "arrow_upward"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/pages/admin/availability.js",
+                                                                            lineNumber: 251,
+                                                                            columnNumber: 96
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/pages/admin/availability.js",
-                                                                        lineNumber: 187,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 251,
+                                                                        columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                         onClick: ()=>moveClass(ci, 1),
-                                                                        style: {
-                                                                            border: 'none',
-                                                                            background: 'none',
-                                                                            cursor: 'pointer',
-                                                                            fontSize: 16,
-                                                                            color: '#9ca3af',
-                                                                            padding: 4
-                                                                        },
+                                                                        style: iconBtn,
                                                                         title: "下へ",
-                                                                        children: "↓"
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "material-icons",
+                                                                            style: {
+                                                                                fontSize: 18
+                                                                            },
+                                                                            children: "arrow_downward"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/pages/admin/availability.js",
+                                                                            lineNumber: 252,
+                                                                            columnNumber: 95
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/pages/admin/availability.js",
-                                                                        lineNumber: 188,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 252,
+                                                                        columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                         onClick: ()=>startEditClass(ci),
-                                                                        style: {
-                                                                            border: 'none',
-                                                                            background: 'none',
-                                                                            cursor: 'pointer',
-                                                                            fontSize: 16,
-                                                                            color: '#6b7280',
-                                                                            padding: 4
-                                                                        },
+                                                                        style: iconBtn,
                                                                         title: "編集",
-                                                                        children: "✏️"
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "material-icons",
+                                                                            style: {
+                                                                                fontSize: 18
+                                                                            },
+                                                                            children: "edit"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/pages/admin/availability.js",
+                                                                            lineNumber: 253,
+                                                                            columnNumber: 97
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/pages/admin/availability.js",
-                                                                        lineNumber: 189,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 253,
+                                                                        columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                         onClick: ()=>removeClass(ci),
                                                                         style: {
-                                                                            border: 'none',
-                                                                            background: 'none',
-                                                                            cursor: 'pointer',
-                                                                            fontSize: 16,
-                                                                            color: '#ef4444',
-                                                                            padding: 4
+                                                                            ...iconBtn,
+                                                                            color: '#ef4444'
                                                                         },
                                                                         title: "削除",
-                                                                        children: "🗑️"
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "material-icons",
+                                                                            style: {
+                                                                                fontSize: 18
+                                                                            },
+                                                                            children: "delete"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/pages/admin/availability.js",
+                                                                            lineNumber: 254,
+                                                                            columnNumber: 119
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/pages/admin/availability.js",
-                                                                        lineNumber: 190,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 254,
+                                                                        columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/pages/admin/availability.js",
-                                                                lineNumber: 186,
-                                                                columnNumber: 23
+                                                                lineNumber: 250,
+                                                                columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/pages/admin/availability.js",
-                                                            lineNumber: 185,
-                                                            columnNumber: 21
+                                                            lineNumber: 249,
+                                                            columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, cls.id, true, {
                                                     fileName: "[project]/pages/admin/availability.js",
-                                                    lineNumber: 157,
-                                                    columnNumber: 19
+                                                    lineNumber: 223,
+                                                    columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 155,
-                                            columnNumber: 15
+                                            lineNumber: 221,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 141,
-                                    columnNumber: 13
+                                    lineNumber: 209,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 140,
-                                columnNumber: 11
+                                lineNumber: 208,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: addClass,
@@ -1055,52 +1326,80 @@ function AvailabilityAdmin() {
                                     color: '#6b7280',
                                     fontSize: 14,
                                     cursor: 'pointer',
-                                    marginBottom: 32
+                                    marginBottom: 24,
+                                    width: isSP ? '100%' : 'auto',
+                                    justifyContent: 'center'
                                 },
-                                children: "＋ クラスを追加"
-                            }, void 0, false, {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "material-icons",
+                                        style: {
+                                            fontSize: 18
+                                        },
+                                        children: "add"
+                                    }, void 0, false, {
+                                        fileName: "[project]/pages/admin/availability.js",
+                                        lineNumber: 274,
+                                        columnNumber: 13
+                                    }, this),
+                                    " クラスを追加"
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 200,
+                                lineNumber: 265,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    position: 'sticky',
+                                    position: 'fixed',
                                     bottom: 0,
-                                    padding: '16px 0',
-                                    background: '#f9fafb',
-                                    borderTop: '1px solid #e5e7eb'
+                                    left: 0,
+                                    right: 0,
+                                    padding: '12px 16px',
+                                    background: '#fff',
+                                    borderTop: '1px solid #e5e7eb',
+                                    boxShadow: '0 -2px 8px rgba(0,0,0,0.08)'
                                 },
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: save,
-                                    disabled: saving,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
-                                        width: '100%',
-                                        padding: '14px 0',
-                                        borderRadius: 8,
-                                        border: 'none',
-                                        background: saved ? '#16a34a' : '#111',
-                                        color: '#fff',
-                                        fontSize: 16,
-                                        fontWeight: 600,
-                                        cursor: saving ? 'wait' : 'pointer',
-                                        transition: 'background 0.3s'
+                                        maxWidth: 800,
+                                        margin: '0 auto'
                                     },
-                                    children: saving ? '保存中...' : saved ? '保存しました ✓' : '変更を保存'
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: save,
+                                        disabled: saving,
+                                        style: {
+                                            width: '100%',
+                                            padding: '14px 0',
+                                            borderRadius: 8,
+                                            border: 'none',
+                                            background: saved ? '#16a34a' : '#111',
+                                            color: '#fff',
+                                            fontSize: 16,
+                                            fontWeight: 600,
+                                            cursor: saving ? 'wait' : 'pointer',
+                                            transition: 'background 0.3s'
+                                        },
+                                        children: saving ? '保存中...' : saved ? '保存しました ✓' : '変更を保存'
+                                    }, void 0, false, {
+                                        fileName: "[project]/pages/admin/availability.js",
+                                        lineNumber: 284,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 214,
+                                    lineNumber: 283,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/admin/availability.js",
-                                lineNumber: 213,
+                                lineNumber: 278,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/pages/admin/availability.js",
-                        lineNumber: 116,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this),
                     editingClass !== null && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,154 +1438,82 @@ function AvailabilityAdmin() {
                                     children: "クラス情報を編集"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 239,
+                                    lineNumber: 311,
                                     columnNumber: 15
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    style: {
-                                        marginBottom: 12
+                                [
+                                    {
+                                        label: 'クラス名',
+                                        key: 'name',
+                                        placeholder: ''
                                     },
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            style: {
-                                                display: 'block',
-                                                fontSize: 13,
-                                                fontWeight: 600,
-                                                color: '#374151',
-                                                marginBottom: 4
-                                            },
-                                            children: "クラス名"
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 241,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            value: editForm.name,
-                                            onChange: (e)=>setEditForm((p)=>({
-                                                        ...p,
-                                                        name: e.target.value
-                                                    })),
-                                            style: {
-                                                width: '100%',
-                                                padding: '8px 12px',
-                                                border: '1px solid #d1d5db',
-                                                borderRadius: 6,
-                                                fontSize: 14,
-                                                boxSizing: 'border-box'
-                                            }
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 242,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 240,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    style: {
-                                        marginBottom: 12
+                                    {
+                                        label: 'サブタイトル',
+                                        key: 'subtitle',
+                                        placeholder: '例: 小学6年生限定'
                                     },
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            style: {
-                                                display: 'block',
-                                                fontSize: 13,
-                                                fontWeight: 600,
-                                                color: '#374151',
-                                                marginBottom: 4
-                                            },
-                                            children: "サブタイトル"
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 249,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            value: editForm.subtitle,
-                                            onChange: (e)=>setEditForm((p)=>({
-                                                        ...p,
-                                                        subtitle: e.target.value
-                                                    })),
-                                            placeholder: "例: 小学6年生限定",
-                                            style: {
-                                                width: '100%',
-                                                padding: '8px 12px',
-                                                border: '1px solid #d1d5db',
-                                                borderRadius: 6,
-                                                fontSize: 14,
-                                                boxSizing: 'border-box'
-                                            }
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 250,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 248,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    style: {
-                                        marginBottom: 20
-                                    },
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            style: {
-                                                display: 'block',
-                                                fontSize: 13,
-                                                fontWeight: 600,
-                                                color: '#374151',
-                                                marginBottom: 4
-                                            },
-                                            children: "時間帯"
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 258,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            value: editForm.schedule,
-                                            onChange: (e)=>setEditForm((p)=>({
-                                                        ...p,
-                                                        schedule: e.target.value
-                                                    })),
-                                            placeholder: "例: 17:15〜18:35",
-                                            style: {
-                                                width: '100%',
-                                                padding: '8px 12px',
-                                                border: '1px solid #d1d5db',
-                                                borderRadius: 6,
-                                                fontSize: 14,
-                                                boxSizing: 'border-box'
-                                            }
-                                        }, void 0, false, {
-                                            fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 259,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 257,
-                                    columnNumber: 15
-                                }, this),
+                                    {
+                                        label: '時間帯',
+                                        key: 'schedule',
+                                        placeholder: '例: 17:15〜18:35'
+                                    }
+                                ].map(({ label, key, placeholder })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            marginBottom: 12
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                style: {
+                                                    display: 'block',
+                                                    fontSize: 13,
+                                                    fontWeight: 600,
+                                                    color: '#374151',
+                                                    marginBottom: 4
+                                                },
+                                                children: label
+                                            }, void 0, false, {
+                                                fileName: "[project]/pages/admin/availability.js",
+                                                lineNumber: 318,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                value: editForm[key],
+                                                onChange: (e)=>setEditForm((p)=>({
+                                                            ...p,
+                                                            [key]: e.target.value
+                                                        })),
+                                                placeholder: placeholder,
+                                                style: {
+                                                    width: '100%',
+                                                    padding: '10px 12px',
+                                                    border: '1px solid #d1d5db',
+                                                    borderRadius: 6,
+                                                    fontSize: 14,
+                                                    boxSizing: 'border-box'
+                                                }
+                                            }, void 0, false, {
+                                                fileName: "[project]/pages/admin/availability.js",
+                                                lineNumber: 319,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, key, true, {
+                                        fileName: "[project]/pages/admin/availability.js",
+                                        lineNumber: 317,
+                                        columnNumber: 17
+                                    }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         display: 'flex',
                                         gap: 8,
-                                        justifyContent: 'flex-end'
+                                        justifyContent: 'flex-end',
+                                        marginTop: 20
                                     },
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>setEditingClass(null),
                                             style: {
-                                                padding: '8px 20px',
+                                                padding: '10px 20px',
                                                 border: '1px solid #d1d5db',
                                                 borderRadius: 6,
                                                 background: '#fff',
@@ -1297,13 +1524,13 @@ function AvailabilityAdmin() {
                                             children: "キャンセル"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 267,
+                                            lineNumber: 328,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: saveEditClass,
                                             style: {
-                                                padding: '8px 20px',
+                                                padding: '10px 20px',
                                                 border: 'none',
                                                 borderRadius: 6,
                                                 background: '#111',
@@ -1315,37 +1542,47 @@ function AvailabilityAdmin() {
                                             children: "保存"
                                         }, void 0, false, {
                                             fileName: "[project]/pages/admin/availability.js",
-                                            lineNumber: 270,
+                                            lineNumber: 331,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/pages/admin/availability.js",
-                                    lineNumber: 266,
+                                    lineNumber: 327,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/admin/availability.js",
-                            lineNumber: 238,
+                            lineNumber: 310,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/pages/admin/availability.js",
-                        lineNumber: 231,
+                        lineNumber: 302,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/admin/availability.js",
-                lineNumber: 115,
+                lineNumber: 132,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(AvailabilityAdmin, "bO1Hwtm37SOljE9LiabcTyT9RLA=");
+_s(AvailabilityAdmin, "eEySn75Ue2gf7WV67w1ynPO6XN0=");
 _c = AvailabilityAdmin;
+const iconBtn = {
+    border: 'none',
+    background: 'none',
+    cursor: 'pointer',
+    fontSize: 16,
+    color: '#6b7280',
+    padding: 6,
+    borderRadius: 6,
+    lineHeight: 1
+};
 var _c;
 __turbopack_context__.k.register(_c, "AvailabilityAdmin");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

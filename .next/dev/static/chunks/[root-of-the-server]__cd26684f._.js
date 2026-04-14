@@ -477,8 +477,7 @@ __turbopack_context__.v({
   "heroImage": "HeroSection-module__fSZHDq__heroImage",
   "heroOverlay": "HeroSection-module__fSZHDq__heroOverlay",
   "heroTitle": "HeroSection-module__fSZHDq__heroTitle",
-  "heroVideo": "HeroSection-module__fSZHDq__heroVideo",
-  "heroVideoIframe": "HeroSection-module__fSZHDq__heroVideoIframe",
+  "heroTitleImage": "HeroSection-module__fSZHDq__heroTitleImage",
   "newsDate": "HeroSection-module__fSZHDq__newsDate",
   "newsLabel": "HeroSection-module__fSZHDq__newsLabel",
   "newsTag": "HeroSection-module__fSZHDq__newsTag",
@@ -499,9 +498,10 @@ __turbopack_context__.v({
   "page2ImageWrapVisible": "HeroSection-module__fSZHDq__page2ImageWrapVisible",
   "page2Inner": "HeroSection-module__fSZHDq__page2Inner",
   "page2Title": "HeroSection-module__fSZHDq__page2Title",
+  "spAvailBelow": "HeroSection-module__fSZHDq__spAvailBelow",
+  "spAvailInHero": "HeroSection-module__fSZHDq__spAvailInHero",
   "spAvailSection": "HeroSection-module__fSZHDq__spAvailSection",
   "spLogoAfter": "HeroSection-module__fSZHDq__spLogoAfter",
-  "verticalText": "HeroSection-module__fSZHDq__verticalText",
 });
 }),
 "[project]/styles/AcademyAvailability.module.css [client] (css module)", ((__turbopack_context__) => {
@@ -525,6 +525,7 @@ __turbopack_context__.s([
     "default",
     ()=>AcademyAvailability
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$AcademyAvailability$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/styles/AcademyAvailability.module.css [client] (css module)");
@@ -569,7 +570,8 @@ function AcademyAvailability({ visible = true }) {
     const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AcademyAvailability.useEffect": ()=>{
-            fetch('/api/availability').then({
+            const api = ("TURBOPACK compile-time value", "http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1") || 'http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1';
+            fetch(`${api}/availability`).then({
                 "AcademyAvailability.useEffect": (res)=>res.json()
             }["AcademyAvailability.useEffect"]).then({
                 "AcademyAvailability.useEffect": (d)=>setData(d)
@@ -592,7 +594,7 @@ function AcademyAvailability({ visible = true }) {
                 children: "アカデミー空き状況"
             }, void 0, false, {
                 fileName: "[project]/components/home/AcademyAvailability.js",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -605,7 +607,7 @@ function AcademyAvailability({ visible = true }) {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$AcademyAvailability$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].cornerCell
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/AcademyAvailability.js",
-                                    lineNumber: 45,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, this),
                                 DAY_LABELS.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -613,18 +615,18 @@ function AcademyAvailability({ visible = true }) {
                                         children: d.label
                                     }, d.key, false, {
                                         fileName: "[project]/components/home/AcademyAvailability.js",
-                                        lineNumber: 47,
+                                        lineNumber: 48,
                                         columnNumber: 15
                                     }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/home/AcademyAvailability.js",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/home/AcademyAvailability.js",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -643,12 +645,12 @@ function AcademyAvailability({ visible = true }) {
                                             children: cls.name
                                         }, void 0, false, {
                                             fileName: "[project]/components/home/AcademyAvailability.js",
-                                            lineNumber: 57,
+                                            lineNumber: 58,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/home/AcademyAvailability.js",
-                                        lineNumber: 56,
+                                        lineNumber: 57,
                                         columnNumber: 17
                                     }, this),
                                     DAY_LABELS.map((d)=>{
@@ -663,37 +665,37 @@ function AcademyAvailability({ visible = true }) {
                                                 children: status
                                             }, void 0, false, {
                                                 fileName: "[project]/components/home/AcademyAvailability.js",
-                                                lineNumber: 63,
+                                                lineNumber: 64,
                                                 columnNumber: 23
                                             }, this)
                                         }, d.key, false, {
                                             fileName: "[project]/components/home/AcademyAvailability.js",
-                                            lineNumber: 62,
+                                            lineNumber: 63,
                                             columnNumber: 21
                                         }, this);
                                     })
                                 ]
                             }, cls.id, true, {
                                 fileName: "[project]/components/home/AcademyAvailability.js",
-                                lineNumber: 55,
+                                lineNumber: 56,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/components/home/AcademyAvailability.js",
-                        lineNumber: 51,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/AcademyAvailability.js",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/home/AcademyAvailability.js",
-        lineNumber: 33,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 }
@@ -735,9 +737,6 @@ function HeroSection() {
     const page2Ref = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [isSP, setIsSP] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // SP用スクロールステージ制御
-    const [spTitleVisible, setSpTitleVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [page2FadeOut, setPage2FadeOut] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     // SP用: makiharaのみ表示
     const page2Images = isSP ? [
         PAGE2_IMAGES[0]
@@ -764,12 +763,10 @@ function HeroSection() {
         "HeroSection.useEffect": ()=>{
             setVh(window.innerHeight);
             setIsSP(window.innerWidth <= 768);
-            setScrollY(window.scrollY); // 初期スクロール位置を読み取り
-            setMounted(true); // マウント完了
+            setScrollY(window.scrollY);
+            setMounted(true);
             const handleScroll = {
-                "HeroSection.useEffect.handleScroll": ()=>{
-                    setScrollY(window.scrollY);
-                }
+                "HeroSection.useEffect.handleScroll": ()=>setScrollY(window.scrollY)
             }["HeroSection.useEffect.handleScroll"];
             const handleResize = {
                 "HeroSection.useEffect.handleResize": ()=>{
@@ -787,46 +784,15 @@ function HeroSection() {
             })["HeroSection.useEffect"];
         }
     }["HeroSection.useEffect"], []);
-    // SP用: 4ステージスクロール制御
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "HeroSection.useEffect": ()=>{
-            if (!vh || !isSP) return;
-            // ステージ1→2: 10%vhでタイトル+段落フェードアウト、空き状況出現
-            setSpTitleVisible(scrollY < vh * 0.1);
-        }
-    }["HeroSection.useEffect"], [
-        scrollY,
-        vh,
-        isSP
-    ]);
-    // Page2接近でタイトル＆空き状況がフェードアウト
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "HeroSection.useEffect": ()=>{
-            if (!page2Ref.current || !vh) return;
-            const page2Top = page2Ref.current.getBoundingClientRect().top;
-            setPage2FadeOut(page2Top < vh * 1.0);
-        }
-    }["HeroSection.useEffect"], [
-        scrollY,
-        vh
-    ]);
-    // YouTube: 既存のフェードアウト（マウント前は非表示にして初期描画の不整合を防ぐ）
-    const verticalOpacity = mounted && vh ? Math.max(0, 1 - scrollY / (vh * 0.2)) : 0;
     // ニュースティッカー・ボタン: フェード＋横スライドアウト
     const uiProgress = mounted && vh ? Math.min(1, scrollY / (vh * 0.1)) : 1;
     const uiOpacity = Math.max(0, 1 - uiProgress);
-    // P1背景: p1で表示、p2でフェードアウト（球体を表示するため）
-    const scrollFraction = mounted && vh ? Math.min(1, Math.max(0, (scrollY - vh * 0.5) / (vh * 0.5))) : 0;
-    const p2BgOpacity = 1 - scrollFraction;
-    // P2画像スライドイン: P2セクションが見え始めたら
-    const p2ImagesVisible = mounted && vh && scrollY > vh * 1.0;
+    // P2画像: マウント直後から表示
+    const p2ImagesVisible = mounted;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].fixedBg,
-                style: {
-                    opacity: p2BgOpacity
-                },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                         src: "/images/p2_bg.webp",
@@ -835,108 +801,20 @@ function HeroSection() {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroImage
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 90,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroOverlay
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 96,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 89,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroVideo,
-                style: {
-                    opacity: verticalOpacity,
-                    transition: scrollY === 0 ? 'opacity 1.5s ease-out' : 'none'
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                    src: "https://www.youtube.com/embed/mZjbQCXli-8?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=mZjbQCXli-8&rel=0&playsinline=1",
-                    title: "SSBA紹介動画",
-                    allow: "autoplay; encrypted-media",
-                    allowFullScreen: true,
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroVideoIframe
-                }, void 0, false, {
-                    fileName: "[project]/components/home/HeroSection.js",
-                    lineNumber: 107,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 100,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].verticalText,
-                style: {
-                    opacity: mounted ? undefined : 0
-                },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroTitle} ${isSP ? spTitleVisible ? '' : __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].fadeOut : page2FadeOut ? __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].fadeOut : ''}`,
-                        children: isSP ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: "/images/zenshin.webp",
-                            alt: "かすかでも確実に前進",
-                            width: 300,
-                            height: 80,
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroTitleImage,
-                            priority: true
-                        }, void 0, false, {
-                            fileName: "[project]/components/home/HeroSection.js",
-                            lineNumber: 122,
-                            columnNumber: 13
-                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].heroTitleText,
-                            children: "かすかでも確実に前進"
-                        }, void 0, false, {
-                            fileName: "[project]/components/home/HeroSection.js",
-                            lineNumber: 131,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 118,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: isSP ? spTitleVisible ? '' : __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].fadeOut : page2FadeOut ? __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].fadeOut : '',
-                        children: [
-                            "プロ野球選手の自主トレパートナーとして",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 135,
-                                columnNumber: 30
-                            }, this),
-                            "培った技術と経験を、",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 136,
-                                columnNumber: 21
-                            }, this),
-                            "次世代の選手たちへ。",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 137,
-                                columnNumber: 21
-                            }, this),
-                            "少人数制で一人ひとりに向き合う指導。"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 134,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 117,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -948,12 +826,12 @@ function HeroSection() {
                             visible: uiOpacity > 0
                         }, void 0, false, {
                             fileName: "[project]/components/home/HeroSection.js",
-                            lineNumber: 146,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 145,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -983,33 +861,80 @@ function HeroSection() {
                                                 rx: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 159,
+                                                lineNumber: 91,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                 d: "M8 21h8M12 17v4"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 160,
+                                                lineNumber: 92,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 158,
+                                        lineNumber: 90,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "コース紹介"
                                     }, void 0, false, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 162,
+                                        lineNumber: 94,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 157,
+                                lineNumber: 89,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "/coaches",
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].bottomLink,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "1.5",
+                                        width: "28",
+                                        height: "28",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                                cx: "12",
+                                                cy: "8",
+                                                r: "4"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/home/HeroSection.js",
+                                                lineNumber: 98,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M4 20c0-4 3.6-7 8-7s8 3 8 7"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/home/HeroSection.js",
+                                                lineNumber: 99,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/home/HeroSection.js",
+                                        lineNumber: 97,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "指導者紹介"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/home/HeroSection.js",
+                                        lineNumber: 101,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/home/HeroSection.js",
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1023,106 +948,41 @@ function HeroSection() {
                                         strokeWidth: "1.5",
                                         width: "28",
                                         height: "28",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 166,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
-                                                x: "9",
-                                                y: "3",
-                                                width: "6",
-                                                height: "4",
-                                                rx: "1"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 167,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                d: "M9 14l2 2 4-4"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 168,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/home/HeroSection.js",
+                                            lineNumber: 105,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 165,
+                                        lineNumber: 104,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "体験申込"
+                                        children: "問い合わせ"
                                     }, void 0, false, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 170,
+                                        lineNumber: 107,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 164,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "/facility",
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].bottomLink,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        viewBox: "0 0 24 24",
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        strokeWidth: "1.5",
-                                        width: "28",
-                                        height: "28",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                d: "M3 21h18M5 21V7l8-4v18M13 21V3l6 4v14"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 174,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                d: "M9 9v.01M9 12v.01M9 15v.01"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 175,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 173,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "施設見学"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 177,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 172,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 150,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 143,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1138,25 +998,25 @@ function HeroSection() {
                             priority: true
                         }, void 0, false, {
                             fileName: "[project]/components/home/HeroSection.js",
-                            lineNumber: 185,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 184,
+                        lineNumber: 114,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$AcademyAvailability$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                         visible: true
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 193,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 183,
+                lineNumber: 113,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1181,35 +1041,35 @@ function HeroSection() {
                                             className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2Image
                                         }, void 0, false, {
                                             fileName: "[project]/components/home/HeroSection.js",
-                                            lineNumber: 207,
+                                            lineNumber: 137,
                                             columnNumber: 17
                                         }, this)
                                     }, src, false, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 202,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 200,
+                                lineNumber: 130,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `${__TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrap} ${__TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrapLeft} ${p2ImagesVisible ? __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrapVisible : ''}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/images/makihara_nagare.JPG",
+                                    src: "/images/makihara_nagare.webp",
                                     alt: "SSBA 練習風景",
                                     width: 600,
                                     height: 400,
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2Image
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/HeroSection.js",
-                                    lineNumber: 220,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 219,
+                                lineNumber: 149,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1221,14 +1081,14 @@ function HeroSection() {
                                             "プロが認める指導力で",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 232,
+                                                lineNumber: 162,
                                                 columnNumber: 25
                                             }, this),
                                             "次のステージへ"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 231,
+                                        lineNumber: 161,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1237,74 +1097,88 @@ function HeroSection() {
                                             "私はこれまで数多くのプロ野球選手とプレーや練習をしてきました。",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 235,
+                                                lineNumber: 165,
                                                 columnNumber: 46
                                             }, this),
                                             "その全てのプロ野球選手が共通して行っている練習が基本動作の反復練習です。",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 236,
+                                                lineNumber: 166,
                                                 columnNumber: 51
                                             }, this),
                                             "しっかりとした基本をひたすら練習したからこそ一流のプレーができ持続できるのです。",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 237,
+                                                lineNumber: 167,
                                                 columnNumber: 55
                                             }, this),
                                             "特に小学生、中学生時は基本動作を覚えることが必要です。",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 238,
+                                                lineNumber: 168,
                                                 columnNumber: 42
                                             }, this),
                                             "分からないままや、間違った形を覚えてしまうとそれが癖となり故障にも繋がります。",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 239,
+                                                lineNumber: 169,
                                                 columnNumber: 54
                                             }, this),
                                             "当塾では生徒１人１人とコミニュケーションをとりながら、",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/components/home/HeroSection.js",
-                                                lineNumber: 240,
+                                                lineNumber: 170,
                                                 columnNumber: 42
                                             }, this),
                                             "１つ１つステップアップできるように指導させて頂きます。"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/home/HeroSection.js",
-                                        lineNumber: 234,
+                                        lineNumber: 164,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 230,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: `${__TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrap} ${__TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrapRight} ${p2ImagesVisible ? __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2ImageWrapVisible : ''}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/images/kawasaki_nagare.jpg",
+                                    src: "/images/kawasaki_nagare.webp",
                                     alt: "SSBA 練習風景",
                                     width: 600,
                                     height: 400,
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].page2Image
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/HeroSection.js",
-                                    lineNumber: 247,
+                                    lineNumber: 177,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/home/HeroSection.js",
-                                lineNumber: 246,
+                                lineNumber: 176,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 198,
+                        lineNumber: 128,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$HeroSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].spAvailBelow,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$AcademyAvailability$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                            visible: true
+                        }, void 0, false, {
+                            fileName: "[project]/components/home/HeroSection.js",
+                            lineNumber: 189,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/home/HeroSection.js",
+                        lineNumber: 188,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1319,30 +1193,30 @@ function HeroSection() {
                                     children: ">"
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/HeroSection.js",
-                                    lineNumber: 261,
+                                    lineNumber: 196,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/home/HeroSection.js",
-                            lineNumber: 259,
+                            lineNumber: 194,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/home/HeroSection.js",
-                        lineNumber: 258,
+                        lineNumber: 193,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/HeroSection.js",
-                lineNumber: 197,
+                lineNumber: 127,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(HeroSection, "o4k+TppoVyknOyQ/2wZBQHhFfcE=");
+_s(HeroSection, "TjLD1AlFhM7CIXwSuXzXjoqqR9g=");
 _c = HeroSection;
 var _c;
 __turbopack_context__.k.register(_c, "HeroSection");
@@ -2203,73 +2077,37 @@ __turbopack_context__.s([
     "default",
     ()=>ColumnSection
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/link.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$common$2f$SectionTitle$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/common/SectionTitle.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/styles/ColumnSection.module.css [client] (css module)");
 ;
-var _s = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
 ;
-const COLUMNS = [
-    {
-        id: 1,
-        title: 'バッティングの基本姿勢について～正しいフォームを身につけることが上達への第一歩',
-        date: '2026.03.01',
-        category: 'コーチング',
-        thumbnail: '/images/p2_bg.webp'
-    },
-    {
-        id: 2,
-        title: '冬場のトレーニング方法～オフシーズンにこそ差がつく',
-        date: '2026.02.15',
-        category: 'トレーニング',
-        thumbnail: '/images/kawasaki_nagare.webp'
-    },
-    {
-        id: 3,
-        title: 'ピッチングフォームの改善ポイント',
-        date: '2026.02.01',
-        category: 'コーチング',
-        thumbnail: '/images/makihara_nagare.webp'
-    },
-    {
-        id: 4,
-        title: '試合前のウォーミングアップの重要性',
-        date: '2026.01.20',
-        category: 'トレーニング',
-        thumbnail: '/images/p2_bg.webp'
-    },
-    {
-        id: 5,
-        title: 'チームワークを高める練習メニュー',
-        date: '2026.01.10',
-        category: 'コーチング',
-        thumbnail: '/images/kawasaki_nagare.webp'
-    }
-];
 function CardItem({ col }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-        href: "/column",
+        href: `/column`,
         className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].card,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].cardImage,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                    src: col.thumbnail,
+                    src: col.image || col.thumbnail || '/images/eye-catch.webp',
                     alt: col.title
                 }, void 0, false, {
                     fileName: "[project]/components/home/ColumnSection.js",
-                    lineNumber: 50,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/home/ColumnSection.js",
-                lineNumber: 49,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2280,7 +2118,7 @@ function CardItem({ col }) {
                         children: col.title
                     }, void 0, false, {
                         fileName: "[project]/components/home/ColumnSection.js",
-                        lineNumber: 53,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2291,33 +2129,33 @@ function CardItem({ col }) {
                                 children: col.date
                             }, void 0, false, {
                                 fileName: "[project]/components/home/ColumnSection.js",
-                                lineNumber: 55,
+                                lineNumber: 17,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            (col.tag || col.category) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].metaCategory,
-                                children: col.category
+                                children: col.tag || col.category
                             }, void 0, false, {
                                 fileName: "[project]/components/home/ColumnSection.js",
-                                lineNumber: 56,
-                                columnNumber: 11
+                                lineNumber: 19,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/home/ColumnSection.js",
-                        lineNumber: 54,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/home/ColumnSection.js",
-                lineNumber: 52,
+                lineNumber: 14,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/home/ColumnSection.js",
-        lineNumber: 48,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }
@@ -2363,12 +2201,12 @@ function MobileCarousel({ articles }) {
                         col: col
                     }, col.id, false, {
                         fileName: "[project]/components/home/ColumnSection.js",
-                        lineNumber: 91,
+                        lineNumber: 55,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/home/ColumnSection.js",
-                lineNumber: 84,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2379,26 +2217,43 @@ function MobileCarousel({ articles }) {
                         "aria-label": `記事 ${i + 1}`
                     }, i, false, {
                         fileName: "[project]/components/home/ColumnSection.js",
-                        lineNumber: 96,
+                        lineNumber: 60,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/home/ColumnSection.js",
-                lineNumber: 94,
+                lineNumber: 58,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/home/ColumnSection.js",
-        lineNumber: 83,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
 _s(MobileCarousel, "6diWChZhIEhYuhMO9rIM7/cm6Uk=");
 _c1 = MobileCarousel;
 function ColumnSection() {
-    const featured = COLUMNS[0];
-    const sideArticles = COLUMNS.slice(1, 5);
+    _s1();
+    const [columns, setColumns] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ColumnSection.useEffect": ()=>{
+            const api = ("TURBOPACK compile-time value", "http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1") || 'http://ssba.e3.valueserver.jp/wp/wp-json/ssba/v1';
+            fetch(`${api}/columns?per_page=5`).then({
+                "ColumnSection.useEffect": (r)=>r.json()
+            }["ColumnSection.useEffect"]).then({
+                "ColumnSection.useEffect": (data)=>{
+                    if (Array.isArray(data) && data.length > 0) setColumns(data);
+                }
+            }["ColumnSection.useEffect"]).catch({
+                "ColumnSection.useEffect": ()=>{}
+            }["ColumnSection.useEffect"]);
+        }
+    }["ColumnSection.useEffect"], []);
+    if (columns.length === 0) return null;
+    const featured = columns[0];
+    const sideArticles = columns.slice(1, 5);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].section,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2412,7 +2267,7 @@ function ColumnSection() {
                             title: "コラム"
                         }, void 0, false, {
                             fileName: "[project]/components/home/ColumnSection.js",
-                            lineNumber: 116,
+                            lineNumber: 94,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2425,19 +2280,19 @@ function ColumnSection() {
                                     children: ">"
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/ColumnSection.js",
-                                    lineNumber: 119,
+                                    lineNumber: 97,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/home/ColumnSection.js",
-                            lineNumber: 117,
+                            lineNumber: 95,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/home/ColumnSection.js",
-                    lineNumber: 115,
+                    lineNumber: 93,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2450,16 +2305,16 @@ function ColumnSection() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].featuredImage,
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: featured.thumbnail,
+                                        src: featured.image || featured.thumbnail || '/images/eye-catch.webp',
                                         alt: featured.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/home/ColumnSection.js",
-                                        lineNumber: 126,
+                                        lineNumber: 104,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/home/ColumnSection.js",
-                                    lineNumber: 125,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2470,7 +2325,7 @@ function ColumnSection() {
                                             children: featured.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/home/ColumnSection.js",
-                                            lineNumber: 129,
+                                            lineNumber: 107,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2481,33 +2336,33 @@ function ColumnSection() {
                                                     children: featured.date
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/home/ColumnSection.js",
-                                                    lineNumber: 131,
+                                                    lineNumber: 109,
                                                     columnNumber: 17
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                (featured.tag || featured.category) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].metaCategory,
-                                                    children: featured.category
+                                                    children: featured.tag || featured.category
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/home/ColumnSection.js",
-                                                    lineNumber: 132,
-                                                    columnNumber: 17
+                                                    lineNumber: 111,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/home/ColumnSection.js",
-                                            lineNumber: 130,
+                                            lineNumber: 108,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/home/ColumnSection.js",
-                                    lineNumber: 128,
+                                    lineNumber: 106,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/home/ColumnSection.js",
-                            lineNumber: 124,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2516,26 +2371,26 @@ function ColumnSection() {
                                     col: col
                                 }, col.id, false, {
                                     fileName: "[project]/components/home/ColumnSection.js",
-                                    lineNumber: 140,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/home/ColumnSection.js",
-                            lineNumber: 138,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/home/ColumnSection.js",
-                    lineNumber: 123,
+                    lineNumber: 101,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MobileCarousel, {
+                sideArticles.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MobileCarousel, {
                     articles: sideArticles
                 }, void 0, false, {
                     fileName: "[project]/components/home/ColumnSection.js",
-                    lineNumber: 146,
-                    columnNumber: 9
+                    lineNumber: 126,
+                    columnNumber: 37
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ColumnSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].moreLink,
@@ -2549,32 +2404,33 @@ function ColumnSection() {
                                 children: ">"
                             }, void 0, false, {
                                 fileName: "[project]/components/home/ColumnSection.js",
-                                lineNumber: 151,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/home/ColumnSection.js",
-                        lineNumber: 149,
+                        lineNumber: 129,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/home/ColumnSection.js",
-                    lineNumber: 148,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/home/ColumnSection.js",
-            lineNumber: 114,
+            lineNumber: 92,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/home/ColumnSection.js",
-        lineNumber: 113,
+        lineNumber: 91,
         columnNumber: 5
     }, this);
 }
+_s1(ColumnSection, "FGb4ECZkue8/xp6oBDaPDOM3qWY=");
 _c2 = ColumnSection;
 var _c, _c1, _c2;
 __turbopack_context__.k.register(_c, "CardItem");
@@ -2587,16 +2443,11 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/styles/ContentsSection.module.css [client] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
-  "bannerItem": "ContentsSection-module__D6gzSa__bannerItem",
-  "bannerList": "ContentsSection-module__D6gzSa__bannerList",
-  "columns": "ContentsSection-module__D6gzSa__columns",
   "imageButton": "ContentsSection-module__D6gzSa__imageButton",
   "imageGrid": "ContentsSection-module__D6gzSa__imageGrid",
   "inner": "ContentsSection-module__D6gzSa__inner",
-  "left": "ContentsSection-module__D6gzSa__left",
   "overlay": "ContentsSection-module__D6gzSa__overlay",
   "overlayImage": "ContentsSection-module__D6gzSa__overlayImage",
-  "right": "ContentsSection-module__D6gzSa__right",
   "section": "ContentsSection-module__D6gzSa__section",
   "spin": "ContentsSection-module__D6gzSa__spin",
   "spinner": "ContentsSection-module__D6gzSa__spinner",
@@ -2616,48 +2467,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$common$2f$Sect
 var __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/styles/ContentsSection.module.css [client] (css module)");
 ;
 var _s = __turbopack_context__.k.signature();
-'use client';
 ;
 ;
 ;
 ;
-const CONTENTS_IMAGES = [
-    {
-        src: '/images/contents/3年生クラス.JPG',
-        alt: '3年生クラス'
-    },
-    {
-        src: '/images/contents/ラプソード.JPG',
-        alt: 'ラプソード'
-    }
-];
-const BANNERS = [
-    {
-        id: 1,
-        src: '/images/banner/banner1.png',
-        alt: 'バナー1',
-        bg: '#e8e8e8'
-    },
-    {
-        id: 2,
-        src: '/images/banner/banner2.png',
-        alt: 'バナー2',
-        bg: '#dcdcdc'
-    },
-    {
-        id: 3,
-        src: '/images/banner/banner3.png',
-        alt: 'バナー3',
-        bg: '#e0e0e0'
-    },
-    {
-        id: 4,
-        src: '/images/banner/banner4.png',
-        alt: 'バナー4',
-        bg: '#d8d8d8'
-    }
-];
-function ContentsSection() {
+function ContentsSection({ images = [] }) {
     _s();
     const [popupImage, setPopupImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -2672,109 +2486,47 @@ function ContentsSection() {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].section,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].inner,
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].columns,
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].left,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$common$2f$SectionTitle$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                        english: "CONTENTS",
-                                        title: "コンテンツ"
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$common$2f$SectionTitle$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                            english: "CONTENTS",
+                            title: "コンテンツ"
+                        }, void 0, false, {
+                            fileName: "[project]/components/home/ContentsSection.js",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].imageGrid,
+                            children: images.map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].imageButton,
+                                    onClick: ()=>handleImageClick(img),
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        src: img.src,
+                                        alt: img.alt
                                     }, void 0, false, {
                                         fileName: "[project]/components/home/ContentsSection.js",
-                                        lineNumber: 37,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].imageGrid,
-                                        children: CONTENTS_IMAGES.map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].imageButton,
-                                                onClick: ()=>handleImageClick(img),
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                    src: img.src,
-                                                    alt: img.alt
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/home/ContentsSection.js",
-                                                    lineNumber: 45,
-                                                    columnNumber: 21
-                                                }, this)
-                                            }, i, false, {
-                                                fileName: "[project]/components/home/ContentsSection.js",
-                                                lineNumber: 40,
-                                                columnNumber: 19
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/home/ContentsSection.js",
-                                        lineNumber: 38,
-                                        columnNumber: 15
+                                        lineNumber: 28,
+                                        columnNumber: 17
                                     }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/home/ContentsSection.js",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].right,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$common$2f$SectionTitle$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-                                        english: "SUPPORT",
-                                        title: "関連団体"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/home/ContentsSection.js",
-                                        lineNumber: 53,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].bannerList,
-                                        children: BANNERS.map((banner)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
-                                                className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].bannerItem,
-                                                style: {
-                                                    backgroundColor: banner.bg
-                                                },
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                    src: banner.src,
-                                                    alt: banner.alt,
-                                                    onError: (e)=>{
-                                                        e.target.style.display = 'none';
-                                                    }
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/home/ContentsSection.js",
-                                                    lineNumber: 62,
-                                                    columnNumber: 21
-                                                }, this)
-                                            }, banner.id, false, {
-                                                fileName: "[project]/components/home/ContentsSection.js",
-                                                lineNumber: 56,
-                                                columnNumber: 19
-                                            }, this))
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/home/ContentsSection.js",
-                                        lineNumber: 54,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/home/ContentsSection.js",
-                                lineNumber: 52,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/home/ContentsSection.js",
-                        lineNumber: 34,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
+                                }, img.id || i, false, {
+                                    fileName: "[project]/components/home/ContentsSection.js",
+                                    lineNumber: 23,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/home/ContentsSection.js",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/components/home/ContentsSection.js",
-                    lineNumber: 33,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/home/ContentsSection.js",
-                lineNumber: 32,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             popupImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$dom$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["createPortal"])(/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2787,7 +2539,7 @@ function ContentsSection() {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$styles$2f$ContentsSection$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].spinner
                 }, void 0, false, {
                     fileName: "[project]/components/home/ContentsSection.js",
-                    lineNumber: 81,
+                    lineNumber: 41,
                     columnNumber: 13
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: popupImage.src,
@@ -2796,12 +2548,12 @@ function ContentsSection() {
                     onClick: (e)=>e.stopPropagation()
                 }, void 0, false, {
                     fileName: "[project]/components/home/ContentsSection.js",
-                    lineNumber: 83,
+                    lineNumber: 43,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/home/ContentsSection.js",
-                lineNumber: 76,
+                lineNumber: 36,
                 columnNumber: 9
             }, this), document.body)
         ]
@@ -3001,6 +2753,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 __turbopack_context__.s([
+    "__N_SSG",
+    ()=>__N_SSG,
     "default",
     ()=>Home
 ]);
@@ -3020,7 +2774,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$Course
 ;
 ;
 ;
-function Home() {
+var __N_SSG = true;
+function Home({ contents }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3028,37 +2783,39 @@ function Home() {
                     children: "SSBA - Shootingstar Baseball Academy"
                 }, void 0, false, {
                     fileName: "[project]/pages/index.js",
-                    lineNumber: 13,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 12,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$HeroSection$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 17,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$ProSupportSection$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 19,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$OfficialMedia$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 21,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$ColumnSection$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 23,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$ContentsSection$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$home$2f$ContentsSection$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                images: contents
+            }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 25,
+                lineNumber: 33,
                 columnNumber: 7
             }, this)
         ]

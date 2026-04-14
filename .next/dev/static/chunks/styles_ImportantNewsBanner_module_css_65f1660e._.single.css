@@ -1,0 +1,61 @@
+/* [project]/styles/ImportantNewsBanner.module.css [client] (css) */
+.ImportantNewsBanner-module__riCNSq__banner {
+  z-index: 1001;
+  background-color: var(--color-primary);
+  width: 100%;
+  position: relative;
+}
+
+.ImportantNewsBanner-module__riCNSq__row {
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 14px 40px;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: flex;
+}
+
+.ImportantNewsBanner-module__riCNSq__row:hover {
+  opacity: .88;
+}
+
+.ImportantNewsBanner-module__riCNSq__row + .ImportantNewsBanner-module__riCNSq__row {
+  border-top: 1px solid #ffffff40;
+}
+
+.ImportantNewsBanner-module__riCNSq__label {
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: .5px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ImportantNewsBanner-module__riCNSq__title {
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .ImportantNewsBanner-module__riCNSq__row {
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .ImportantNewsBanner-module__riCNSq__label {
+    font-size: 11px;
+  }
+
+  .ImportantNewsBanner-module__riCNSq__title {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=styles_ImportantNewsBanner_module_css_65f1660e._.single.css.map*/

@@ -1,0 +1,137 @@
+.article {
+  max-width: 800px;
+}
+
+.eyecatch {
+  margin-bottom: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.eyecatch img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.articleMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.date {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+.tag {
+  font-size: 11px;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.articleTitle {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-black);
+  line-height: 1.5;
+  margin: 0 0 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* WPエディタから出力されるHTMLのスタイル */
+.articleContent {
+  font-size: 15px;
+  color: #444;
+  line-height: 2;
+}
+
+.articleContent p {
+  margin: 0 0 20px;
+}
+
+.articleContent h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-black);
+  margin: 40px 0 16px;
+  padding-left: 12px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.articleContent h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 32px 0 12px;
+}
+
+.articleContent ul,
+.articleContent ol {
+  margin: 0 0 20px;
+  padding-left: 24px;
+}
+
+.articleContent li {
+  margin-bottom: 6px;
+  line-height: 1.8;
+}
+
+.articleContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+
+.articleContent a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.articleContent blockquote {
+  border-left: 4px solid #ddd;
+  padding: 8px 16px;
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+}
+
+.backWrap {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.backLink {
+  font-size: 14px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .articleTitle {
+    font-size: 22px;
+  }
+
+  .articleContent {
+    font-size: 14px;
+  }
+
+  .articleContent h2 {
+    font-size: 18px;
+  }
+}

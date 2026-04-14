@@ -1,0 +1,117 @@
+/* [project]/styles/NewsList.module.css [client] (css) */
+.NewsList-module__YADJza__list {
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.NewsList-module__YADJza__item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.NewsList-module__YADJza__link {
+  color: inherit;
+  grid-template-columns: 100px 90px 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 20px 8px;
+  text-decoration: none;
+  transition: background-color .15s;
+  display: grid;
+}
+
+.NewsList-module__YADJza__link:hover {
+  background-color: #fafafa;
+}
+
+.NewsList-module__YADJza__link:hover .NewsList-module__YADJza__title {
+  color: var(--color-primary);
+}
+
+.NewsList-module__YADJza__date {
+  color: #888;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  padding-right: 16px;
+  font-size: 13px;
+}
+
+.NewsList-module__YADJza__tagWrap {
+  padding-right: 24px;
+}
+
+.NewsList-module__YADJza__tag {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  white-space: nowrap;
+  letter-spacing: .5px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.NewsList-module__YADJza__important {
+  color: #fff;
+  background: var(--color-primary);
+  white-space: nowrap;
+  margin-right: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.NewsList-module__YADJza__tagEmpty {
+  width: 1px;
+  display: inline-block;
+}
+
+.NewsList-module__YADJza__title {
+  color: #111;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.NewsList-module__YADJza__empty {
+  text-align: center;
+  color: #888;
+  padding: 60px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .NewsList-module__YADJza__link {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto 1fr;
+    gap: 0;
+    padding: 14px 4px;
+  }
+
+  .NewsList-module__YADJza__date {
+    grid-area: 1 / 1;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+
+  .NewsList-module__YADJza__tagWrap {
+    grid-area: 1 / 2;
+    padding-right: 0;
+  }
+
+  .NewsList-module__YADJza__title {
+    white-space: normal;
+    text-overflow: clip;
+    grid-area: 2 / 1 / auto / -1;
+    padding-top: 6px;
+    font-size: 14px;
+    overflow: visible;
+  }
+}
+
+/*# sourceMappingURL=styles_NewsList_module_css_65f1660e._.single.css.map*/

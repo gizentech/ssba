@@ -54,6 +54,7 @@
 .featuredImage {
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  border: 1px solid #d0d0d0;
 }
 
 .featuredImage img {
@@ -118,6 +119,7 @@
 .cardImage {
   aspect-ratio: 3 / 2;
   overflow: hidden;
+  border: 1px solid #d0d0d0;
 }
 
 .cardImage img {
@@ -198,9 +200,7 @@
   }
 
   .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
   }
 
   .layout {

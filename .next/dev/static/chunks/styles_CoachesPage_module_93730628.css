@@ -1,180 +1,321 @@
 /* [project]/styles/CoachesPage.module.css [client] (css) */
-.CoachesPage-module__EGzhJW__page {
-  padding-top: 56px;
+.CoachesPage-module__EGzhJW__wrapper {
+  background: var(--color-white);
+  min-height: 100vh;
 }
 
-.CoachesPage-module__EGzhJW__pageHeader {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  text-align: center;
-  padding: 60px 0;
+.CoachesPage-module__EGzhJW__titleCard {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 104px 40px 0;
+}
+
+.CoachesPage-module__EGzhJW__titleInner {
+  border-bottom: .5px solid #d0d0d0;
+  padding-bottom: 32px;
 }
 
 .CoachesPage-module__EGzhJW__pageTitle {
-  font-size: 36px;
+  letter-spacing: .06em;
+  color: var(--color-black);
+  margin-bottom: 4px;
+  font-size: 32px;
   font-weight: 900;
+  line-height: 1.4;
 }
 
-.CoachesPage-module__EGzhJW__pageSubtitle {
+.CoachesPage-module__EGzhJW__pageSub {
   color: var(--color-gold);
-  letter-spacing: 3px;
-  margin-bottom: 8px;
-  font-size: 14px;
+  letter-spacing: .1em;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-.CoachesPage-module__EGzhJW__section {
-  background-color: var(--color-white);
-  padding: 80px 0;
-}
-
-.CoachesPage-module__EGzhJW__inner {
+.CoachesPage-module__EGzhJW__body {
   max-width: var(--max-width);
+  gap: 48px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 40px 40px 80px;
+  display: flex;
 }
 
-.CoachesPage-module__EGzhJW__coachHeader {
-  text-align: center;
+.CoachesPage-module__EGzhJW__mainColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.CoachesPage-module__EGzhJW__coachCard {
+  align-items: flex-start;
+  gap: 32px;
   margin-bottom: 40px;
+  display: flex;
+}
+
+.CoachesPage-module__EGzhJW__coachPhoto {
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 200px;
+  overflow: hidden;
+}
+
+.CoachesPage-module__EGzhJW__coachPhoto img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.CoachesPage-module__EGzhJW__coachInfo {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 16px;
+  display: flex;
+}
+
+.CoachesPage-module__EGzhJW__coachLabel {
+  color: var(--color-gold);
+  letter-spacing: .08em;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .CoachesPage-module__EGzhJW__coachName {
-  letter-spacing: 4px;
-  font-size: 36px;
+  color: var(--color-black);
+  letter-spacing: .08em;
+  margin: 0 0 4px;
+  font-size: 28px;
   font-weight: 900;
+  line-height: 1.4;
 }
 
 .CoachesPage-module__EGzhJW__coachNameEn {
   color: var(--color-gray);
-  letter-spacing: 2px;
-  margin-top: 8px;
-  font-size: 16px;
+  letter-spacing: .12em;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-.CoachesPage-module__EGzhJW__imageGallery {
-  justify-content: center;
+.CoachesPage-module__EGzhJW__imageGalleryPc, .CoachesPage-module__EGzhJW__imageGallerySp {
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-bottom: 48px;
-  display: flex;
-  overflow-x: auto;
+  display: grid;
+}
+
+.CoachesPage-module__EGzhJW__imageGalleryPc {
+  display: grid;
+}
+
+.CoachesPage-module__EGzhJW__imageGallerySp {
+  margin-top: 24px;
+  display: none;
 }
 
 .CoachesPage-module__EGzhJW__imageItem {
   border-radius: 8px;
-  flex-shrink: 0;
-  width: 160px;
   overflow: hidden;
   box-shadow: 0 4px 12px #0000001a;
 }
 
-.CoachesPage-module__EGzhJW__coachImage {
+.CoachesPage-module__EGzhJW__galleryImage {
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: block;
+}
+
+.CoachesPage-module__EGzhJW__profileSidebar {
+  background: var(--color-light-gray);
+  border-radius: 8px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 340px;
+  padding: 28px 24px;
+  position: sticky;
+  top: 100px;
 }
 
 .CoachesPage-module__EGzhJW__profileSection {
-  margin-bottom: 48px;
+  margin-bottom: 28px;
+}
+
+.CoachesPage-module__EGzhJW__profileSection:last-child {
+  margin-bottom: 0;
 }
 
 .CoachesPage-module__EGzhJW__profileTitle {
-  border-bottom: 3px solid var(--color-primary);
-  margin-bottom: 24px;
+  color: var(--color-black);
+  border-bottom: 2px solid var(--color-primary);
+  margin: 0 0 16px;
   padding-bottom: 12px;
-  font-size: 22px;
-  font-weight: 900;
-  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .CoachesPage-module__EGzhJW__profileList {
-  flex-direction: column;
-  gap: 8px;
-  padding-left: 24px;
-  list-style: outside;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.CoachesPage-module__EGzhJW__profileList li {
-  font-size: 15px;
+.CoachesPage-module__EGzhJW__profileList > li {
+  color: #555;
+  padding: 4px 0;
+  font-size: 13px;
   line-height: 1.8;
 }
 
 .CoachesPage-module__EGzhJW__subList {
   margin-top: 4px;
-  padding-left: 24px;
-  list-style: circle;
+  padding-left: 16px;
+  list-style: none;
 }
 
 .CoachesPage-module__EGzhJW__subList li {
-  font-size: 14px;
+  color: #555;
+  padding: 2px 0;
+  font-size: 13px;
   line-height: 1.8;
 }
 
 .CoachesPage-module__EGzhJW__careerBlock {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+
+.CoachesPage-module__EGzhJW__careerBlock:last-child {
+  margin-bottom: 0;
 }
 
 .CoachesPage-module__EGzhJW__careerSubTitle {
-  color: var(--color-dark);
+  color: var(--color-black);
   border-left: 3px solid var(--color-primary);
-  margin-bottom: 12px;
-  padding-left: 12px;
-  font-size: 17px;
+  margin: 0 0 8px;
+  padding-left: 10px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .CoachesPage-module__EGzhJW__careerTeam {
-  margin-bottom: 16px;
-  padding-left: 16px;
+  margin-bottom: 12px;
+  padding-left: 12px;
 }
 
 .CoachesPage-module__EGzhJW__teamName {
-  margin-bottom: 8px;
-  font-size: 15px;
+  color: #333;
+  margin: 0 0 4px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .CoachesPage-module__EGzhJW__careerList {
-  padding-left: 24px;
-  list-style: outside;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .CoachesPage-module__EGzhJW__careerList li {
-  color: var(--color-dark);
-  font-size: 14px;
-  line-height: 1.8;
+  color: #555;
+  padding: 2px 0 2px 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.CoachesPage-module__EGzhJW__careerList li:before {
+  content: "・";
+  position: absolute;
+  left: 0;
 }
 
 @media (max-width: 768px) {
-  .CoachesPage-module__EGzhJW__page {
-    padding-top: 48px;
+  .CoachesPage-module__EGzhJW__titleCard {
+    padding: 80px 20px 0;
   }
 
-  .CoachesPage-module__EGzhJW__pageHeader {
-    padding: 40px 0;
+  .CoachesPage-module__EGzhJW__titleInner {
+    padding-bottom: 20px;
   }
 
   .CoachesPage-module__EGzhJW__pageTitle {
     font-size: 28px;
   }
 
-  .CoachesPage-module__EGzhJW__section {
-    padding: 48px 0;
+  .CoachesPage-module__EGzhJW__body {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 20px 48px;
+  }
+
+  .CoachesPage-module__EGzhJW__profileSidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .CoachesPage-module__EGzhJW__coachCard {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .CoachesPage-module__EGzhJW__coachPhoto {
+    width: 160px;
+  }
+
+  .CoachesPage-module__EGzhJW__coachInfo {
+    align-items: center;
+    padding-top: 0;
   }
 
   .CoachesPage-module__EGzhJW__coachName {
-    font-size: 28px;
+    font-size: 24px;
   }
 
-  .CoachesPage-module__EGzhJW__imageGallery {
-    justify-content: flex-start;
-    gap: 8px;
-    padding-bottom: 8px;
+  .CoachesPage-module__EGzhJW__imageGalleryPc {
+    display: none;
   }
 
-  .CoachesPage-module__EGzhJW__imageItem {
-    width: 120px;
+  .CoachesPage-module__EGzhJW__imageGallerySp {
+    display: grid;
   }
+}
+
+@media (max-width: 480px) {
+  .CoachesPage-module__EGzhJW__pageTitle {
+    font-size: 24px;
+  }
+
+  .CoachesPage-module__EGzhJW__coachName {
+    font-size: 22px;
+  }
+}
+
+.CoachesPage-module__EGzhJW__imageGalleryNatural {
+  margin-top: 32px;
+}
+
+.CoachesPage-module__EGzhJW__imageItemNatural img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.CoachesPage-module__EGzhJW__greetingBlock {
+  margin-bottom: 32px;
+}
+
+.CoachesPage-module__EGzhJW__greetingText {
+  color: #333;
+  white-space: pre-wrap;
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
 }
 
 /*# sourceMappingURL=styles_CoachesPage_module_93730628.css.map*/

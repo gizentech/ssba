@@ -6,11 +6,12 @@
   "rootMainFiles": [],
   "pages": {
     "/news": [
-      "static/chunks/dad4b6a1e59bb1b3.js",
-      "static/chunks/4f1f14debc7bcd15.js",
-      "static/chunks/00ec219efa96af20.js",
-      "static/chunks/f8d1040c3f04c437.css",
-      "static/chunks/turbopack-dec2ae2a9dfc16ff.js"
+      "static/chunks/5384090febbc6f8a.js",
+      "static/chunks/94a19a2443edf931.js",
+      "static/chunks/3251185ccd955feb.js",
+      "static/chunks/d94cb5a0396fae63.js",
+      "static/chunks/6deb39848beb4be2.css",
+      "static/chunks/turbopack-11392152f6accd00.js"
     ]
   },
   "ampFirstPages": []
