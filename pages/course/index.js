@@ -1,20 +1,15 @@
-import { useState, useEffect } from 'react';
 import SeoHead from '@/components/common/SeoHead';
 import Image from 'next/image';
 import subStyles from '@/styles/SubPage.module.css';
 import styles from '@/styles/CoursePage.module.css';
 import { fetchCourses } from '@/lib/wp-api';
 
-export default function CoursePage() {
-  const [courses, setCourses] = useState([]);
-  const [loading, setLoading] = useState(true);
+export async function getStaticProps() {
+  const courses = await fetchCourses();
+  return { props: { courses } };
+}
 
-  useEffect(() => {
-    fetchCourses().then((data) => {
-      setCourses(data);
-      setLoading(false);
-    });
-  }, []);
+export default function CoursePage({ courses }) {
 
   return (
     <>
@@ -32,11 +27,7 @@ export default function CoursePage() {
           </div>
         </div>
         <div className={subStyles.body}>
-          {loading ? (
-            <div className={subStyles.section}>
-              <p className={subStyles.text} style={{ color: '#888' }}>読み込み中...</p>
-            </div>
-          ) : courses.length === 0 ? (
+          {courses.length === 0 ? (
             <div className={subStyles.section}>
               <p className={subStyles.text}>コンテンツ準備中です</p>
             </div>

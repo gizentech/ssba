@@ -1,20 +1,15 @@
-import { useState, useEffect } from 'react';
 import SeoHead from '@/components/common/SeoHead';
 import Link from 'next/link';
 import styles from '@/styles/SubPage.module.css';
 import listStyles from '@/styles/ArticleList.module.css';
 import { fetchColumns } from '@/lib/wp-api';
 
-export default function ColumnPage() {
-  const [columns, setColumns] = useState([]);
-  const [loading, setLoading] = useState(true);
+export async function getStaticProps() {
+  const columns = await fetchColumns();
+  return { props: { columns } };
+}
 
-  useEffect(() => {
-    fetchColumns().then((data) => {
-      setColumns(data);
-      setLoading(false);
-    });
-  }, []);
+export default function ColumnPage({ columns }) {
 
   return (
     <>
@@ -33,14 +28,12 @@ export default function ColumnPage() {
         </div>
         <div className={styles.body}>
           <div className={styles.section}>
-            {loading ? (
-              <p className={listStyles.empty} style={{ color: '#888' }}>読み込み中...</p>
-            ) : columns.length === 0 ? (
+            {columns.length === 0 ? (
               <p className={listStyles.empty}>コラムはありません</p>
             ) : (
               <div className={listStyles.grid}>
                 {columns.map((col) => (
-                  <Link key={col.id} href={`/column/detail?id=${col.id}`} className={listStyles.card}>
+                  <Link key={col.id} href={`/column/${col.id}`} className={listStyles.card}>
                     <div className={listStyles.cardImage}>
                       <img
                         src={col.image || '/images/eye-catch.webp'}

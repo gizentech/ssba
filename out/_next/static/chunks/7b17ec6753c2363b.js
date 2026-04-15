@@ -1,0 +1,9 @@
+__turbopack_load_page_chunks__("/pro-player/makihara", [
+  "static/chunks/615a12de7640350f.js",
+  "static/chunks/6fada99c2f6fe756.js",
+  "static/chunks/3251185ccd955feb.js",
+  "static/chunks/d94cb5a0396fae63.js",
+  "static/chunks/94a19a2443edf931.js",
+  "static/chunks/a32c65c15a48a5bb.css",
+  "static/chunks/turbopack-afd4569ecdca7499.js"
+])

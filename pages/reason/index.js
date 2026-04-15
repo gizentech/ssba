@@ -1,20 +1,14 @@
-import { useState, useEffect } from 'react';
 import SeoHead from '@/components/common/SeoHead';
 import Image from 'next/image';
 import styles from '@/styles/SubPage.module.css';
 import { fetchReason } from '@/lib/wp-api';
 
-export default function ReasonPage() {
-  const [reason, setReason] = useState({ heroUrl: '', lead: '', bullets: [], sections: [] });
-  const [loading, setLoading] = useState(true);
+export async function getStaticProps() {
+  const reason = await fetchReason();
+  return { props: { reason } };
+}
 
-  useEffect(() => {
-    fetchReason().then((data) => {
-      setReason(data);
-      setLoading(false);
-    });
-  }, []);
-
+export default function ReasonPage({ reason }) {
   const { heroUrl, lead, bullets } = reason;
   let sections = reason.sections;
   if (typeof sections === 'string') {
@@ -38,7 +32,7 @@ export default function ReasonPage() {
           </div>
         </div>
 
-        {!loading && heroUrl && (
+        {heroUrl && (
           <div className={styles.heroImage}>
             <Image
               src={heroUrl}
@@ -51,12 +45,7 @@ export default function ReasonPage() {
         )}
 
         <div className={styles.body}>
-          {loading ? (
-            <div className={styles.section}>
-              <p className={styles.text} style={{ color: '#888' }}>読み込み中...</p>
-            </div>
-          ) : (
-            <>
+          <>
               {lead && (
                 <div className={styles.section}>
                   <p className={styles.leadText}>{lead}</p>
@@ -85,7 +74,6 @@ export default function ReasonPage() {
                 </div>
               ))}
             </>
-          )}
         </div>
       </div>
     </>

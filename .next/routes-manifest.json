@@ -34,7 +34,24 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/column/[id]",
+      "regex": "^/column/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/column/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/news/[id]",
+      "regex": "^/news/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/news/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -127,12 +144,6 @@
       "namedRegex": "^/column(?:/)?$"
     },
     {
-      "page": "/column/detail",
-      "regex": "^/column/detail(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/column/detail(?:/)?$"
-    },
-    {
       "page": "/contact",
       "regex": "^/contact(?:/)?$",
       "routeKeys": {},
@@ -155,12 +166,6 @@
       "regex": "^/news(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/news(?:/)?$"
-    },
-    {
-      "page": "/news/detail",
-      "regex": "^/news/detail(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/news/detail(?:/)?$"
     },
     {
       "page": "/privacy-policy",
@@ -190,7 +195,47 @@
   "dataRoutes": [
     {
       "page": "/",
-      "dataRouteRegex": "^/_next/data/KwdS2H2cpr7iqvM5kTFdw/index\\.json$"
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/index\\.json$"
+    },
+    {
+      "page": "/coaches",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/coaches\\.json$"
+    },
+    {
+      "page": "/column",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/column\\.json$"
+    },
+    {
+      "page": "/column/[id]",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/column/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/column/(?<nxtPid>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/course",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/course\\.json$"
+    },
+    {
+      "page": "/news",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/news\\.json$"
+    },
+    {
+      "page": "/news/[id]",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/news/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/news/(?<nxtPid>[^/]+?)\\.json$"
+    },
+    {
+      "page": "/privacy-policy",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/privacy-policy\\.json$"
+    },
+    {
+      "page": "/reason",
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/reason\\.json$"
     }
   ],
   "rsc": {

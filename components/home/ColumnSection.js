@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import SectionTitle from '@/components/common/SectionTitle';
 import styles from '@/styles/ColumnSection.module.css';
 
 function CardItem({ col }) {
   return (
-    <Link href={`/column/detail?id=${col.id}`} className={styles.card}>
+    <Link href={`/column/${col.id}`} className={styles.card}>
       <div className={styles.cardImage}>
         <img src={col.image || col.thumbnail || '/images/eye-catch.webp'} alt={col.title} />
       </div>
@@ -69,19 +69,7 @@ function MobileCarousel({ articles }) {
   );
 }
 
-export default function ColumnSection() {
-  const [columns, setColumns] = useState([]);
-
-  useEffect(() => {
-    const api = process.env.NEXT_PUBLIC_WP_API || 'https://ssba1223.com/wp/wp-json/ssba/v1';
-    fetch(`${api}/columns?per_page=5`)
-      .then((r) => r.json())
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) setColumns(data);
-      })
-      .catch(() => {});
-  }, []);
-
+export default function ColumnSection({ columns = [] }) {
   if (columns.length === 0) return null;
 
   const featured = columns[0];
@@ -99,7 +87,7 @@ export default function ColumnSection() {
         </div>
 
         <div className={styles.layout}>
-          <Link href={`/column/detail?id=${featured.id}`} className={styles.featured}>
+          <Link href={`/column/${featured.id}`} className={styles.featured}>
             <div className={styles.featuredImage}>
               <img src={featured.image || featured.thumbnail || '/images/eye-catch.webp'} alt={featured.title} />
             </div>

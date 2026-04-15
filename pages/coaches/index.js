@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react';
 import SeoHead from '@/components/common/SeoHead';
 import Image from 'next/image';
 import styles from '@/styles/CoachesPage.module.css';
 import { fetchCoaches } from '@/lib/wp-api';
+
+export async function getStaticProps() {
+  const coaches = await fetchCoaches();
+  return { props: { coaches } };
+}
 
 function ProfileList({ profile }) {
   if (!profile || profile.length === 0) return null;
@@ -140,23 +144,13 @@ function CoachSection({ coach }) {
   );
 }
 
-export default function CoachesPage() {
-  const [coaches, setCoaches] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchCoaches().then((data) => {
-      setCoaches(data);
-      setLoading(false);
-    });
-  }, []);
-
+export default function CoachesPage({ coaches }) {
   return (
     <>
       <SeoHead
         title="指導者紹介｜流大輔・若松悠平コーチ【SSBA 久留米 野球塾】"
         description="SSBAの指導者を紹介。代表・流大輔（高知ファイティングドッグス出身／独立リーグ日本一・最多盗塁王）、スタッフ・若松悠平（香川オリーブガイナーズ・福島レッドホープス出身）。牧原大成・本多雄一・川崎宗則など現役・元プロ野球選手の自主トレにも対応。久留米フューチャースターズとも連携する福岡県久留米市の野球塾。"
-        keywords="流大輔,流 大輔,Nagare Daisuke,流 野球,SSBA,指導者,コーチ,久留米,福岡,野球塾,野球アカデミー,高知ファイティングドッグス,四国アイランドリーグ,独立リーグ,若松悠平,香川オリーブガイナーズ,福島レッドホープス,祐誠高校,牧原大成,本多雄一,川崎宗則,プロ野球,自主トレ,久留米フューチャースターズ,Bar Greenlight,BarGreenlight"
+        keywords="流大輔,流 大輔,Nagare Daisuke,流 野球,SSBA,指導者,コーチ,久留米,久留米市,福岡,野球塾,野球アカデミー,野球教室,高知ファイティングドッグス,四国アイランドリーグ,独立リーグ,独立リーグ日本一,最多盗塁王,若松悠平,香川オリーブガイナーズ,福島レッドホープス,祐誠高校,牧原大成,本多雄一,川崎宗則,プロ野球,プロ野球選手,自主トレ,久留米フューチャースターズ,Bar Greenlight,BarGreenlight,元プロ野球選手,コーチ紹介,指導者紹介,久留米 野球コーチ,福岡 野球指導者"
         canonical="/coaches"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -207,11 +201,7 @@ export default function CoachesPage() {
           </div>
         </div>
 
-        {loading ? (
-          <div style={{ padding: '60px 24px', textAlign: 'center', color: '#888' }}>
-            読み込み中...
-          </div>
-        ) : coaches.length === 0 ? (
+        {coaches.length === 0 ? (
           <div style={{ padding: '60px 24px', textAlign: 'center', color: '#888' }}>
             コンテンツ準備中です
           </div>

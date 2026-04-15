@@ -1,20 +1,15 @@
-import { useState, useEffect } from 'react';
 import SeoHead from '@/components/common/SeoHead';
 import Link from 'next/link';
 import styles from '@/styles/SubPage.module.css';
 import listStyles from '@/styles/NewsList.module.css';
 import { fetchNews } from '@/lib/wp-api';
 
-export default function NewsPage() {
-  const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true);
+export async function getStaticProps() {
+  const news = await fetchNews();
+  return { props: { news } };
+}
 
-  useEffect(() => {
-    fetchNews().then((data) => {
-      setNews(data);
-      setLoading(false);
-    });
-  }, []);
+export default function NewsPage({ news }) {
 
   return (
     <>
@@ -33,15 +28,13 @@ export default function NewsPage() {
         </div>
         <div className={styles.body}>
           <div className={styles.section}>
-            {loading ? (
-              <p className={listStyles.empty} style={{ color: '#888' }}>読み込み中...</p>
-            ) : news.length === 0 ? (
+            {news.length === 0 ? (
               <p className={listStyles.empty}>お知らせはありません</p>
             ) : (
               <ul className={listStyles.list}>
                 {news.map((item) => (
                   <li key={item.id} className={listStyles.item}>
-                    <Link href={`/news/detail?id=${item.id}`} className={listStyles.link}>
+                    <Link href={`/news/${item.id}`} className={listStyles.link}>
                       <span className={listStyles.date}>{item.date}</span>
                       <span className={listStyles.importantWrap}>
                         {item.important && (

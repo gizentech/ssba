@@ -1,10 +1,101 @@
 {
   "version": 4,
   "routes": {
+    "/column": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/column.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/": {
       "initialRevalidateSeconds": false,
       "srcRoute": null,
-      "dataRoute": "/_next/data/KwdS2H2cpr7iqvM5kTFdw/index.json",
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/index.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/news": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/news.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/coaches": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/coaches.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/privacy-policy": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/privacy-policy.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/course": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/course.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/reason": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/reason.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/news/46": {
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/news/[id]",
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/news/46.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -15,7 +106,36 @@
       ]
     }
   },
-  "dynamicRoutes": {},
+  "dynamicRoutes": {
+    "/news/[id]": {
+      "routeRegex": "^/news/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/news/[id].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/news/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/column/[id]": {
+      "routeRegex": "^/column/([^/]+?)(?:/)?$",
+      "dataRoute": "/_next/data/74nWqUs95QbtXTLcKn9EQ/column/[id].json",
+      "fallback": false,
+      "dataRouteRegex": "^/_next/data/74nWqUs95QbtXTLcKn9EQ/column/([^/]+?)\\.json$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    }
+  },
   "notFoundRoutes": [],
   "preview": {
     "previewModeId": "14410243d159f085b5ef7785a4db1535",
